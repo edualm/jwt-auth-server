@@ -1,7 +1,14 @@
 package models;
 
+import com.avaje.ebean.Model;
+import com.avaje.ebean.annotation.Transactional;
+
+import play.data.validation.Constraints;
+
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+
+import javax.persistence.*;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -15,16 +22,24 @@ import java.util.HashMap;
  * Created by MegaEduX on 19/10/15.
  */
 
-public class User {
+@Entity
+public class User extends Model {
     private static int kIterationCount = 1024;
 
+    @Entity
     private class Password {
         //  Partially stolen from https://www.owasp.org/index.php/Hashing_Java
 
+        @Id
+        public Long id;
+
+        @Constraints.Required
         public String digest;
+
+        @Constraints.Required
         public String salt;
 
-        Password(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        public Password(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
             SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
 
             byte[] bSalt = new byte[8];
@@ -37,7 +52,7 @@ public class User {
             this.salt = byteToBase64(bSalt);
         }
 
-        Password(String digest, String salt) {
+        public Password(String digest, String salt) {
             this.digest = digest;
             this.salt = salt;
         }
@@ -80,15 +95,21 @@ public class User {
         }
     }
 
+    @Id
+    public Long id;
+
+    @Constraints.Required
     public String username;
 
+    @Constraints.Required
     public Password password;
 
+    @Constraints.Required
     public String emailAddress;
 
     public HashMap<String, String> additional;
 
-    User(String username, String password, String emailAddress) {
+    public User(String username, String password, String emailAddress) {
         this.username = username;
 
         try {
@@ -98,5 +119,10 @@ public class User {
         }
 
         this.emailAddress = emailAddress;
+    }
+
+    @Transactional
+    public void save() {
+        //  Uh.
     }
 }

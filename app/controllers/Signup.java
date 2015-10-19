@@ -1,5 +1,6 @@
 package controllers;
 
+import models.User;
 import play.mvc.*;
 import play.data.*;
 
@@ -9,7 +10,7 @@ import play.data.*;
 
 public class Signup extends Controller {
 
-    public static Result signup() {
+    public Result signup() {
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");
@@ -17,9 +18,11 @@ public class Signup extends Controller {
 
         String email = form.get("email");
 
-        form.data();
+        User u = new User(user, pass, email);
 
-        return ok("Received POST data...");
+        //  Insert in DB?
+
+        return ok("Signup successful!");
     }
 
 }

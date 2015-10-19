@@ -7,7 +7,7 @@ import play.mvc.*;
  */
 public class Authenticate extends Controller {
 
-    public static Result login() {
+    public Result login() {
         return ok();
     }
 
