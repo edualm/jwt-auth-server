@@ -27,7 +27,7 @@ public class User extends Model {
     private static int kIterationCount = 1024;
 
     @Entity
-    private class Password {
+    private class Password extends Model {
         //  Partially stolen from https://www.owasp.org/index.php/Hashing_Java
 
         @Id
