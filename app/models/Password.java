@@ -5,9 +5,7 @@ import play.data.validation.Constraints;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -27,6 +25,8 @@ public class Password extends Model {
 
     @Id
     @Column(unique = true)
+    @SequenceGenerator(name="password_gen", sequenceName = "password_idcolumn_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "password_gen")
     public Long id;
 
     @Constraints.Required
