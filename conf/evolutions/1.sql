@@ -2,7 +2,7 @@
 
 # --- !Ups
 
-CREATE TABLE Demo (
+CREATE TABLE demo (
     id      INT              NOT NULL,
     foo     TEXT             NOT NULL,
     PRIMARY KEY (id)
