@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="091a7b77-83f9-4fb2-b2fe-52ffa8bd3111" />
+          <option name="name" value="DDL data source" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/app/models/Demo.java" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
