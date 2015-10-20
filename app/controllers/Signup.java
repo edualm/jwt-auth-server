@@ -22,6 +22,8 @@ public class Signup extends Controller {
 
         //  Insert in DB?
 
+        u.save();
+
         return ok("Signup successful!" );
     }
 

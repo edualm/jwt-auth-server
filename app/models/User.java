@@ -52,9 +52,4 @@ public class User extends Model {
 
         this.emailAddress = emailAddress;
     }
-
-    @Transactional
-    public void save() {
-        //  Uh.
-    }
 }
