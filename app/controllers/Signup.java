@@ -22,7 +22,7 @@ public class Signup extends Controller {
 
         //  Insert in DB?
 
-        return ok("Signup successful!");
+        return ok("Signup successful!" );
     }
 
 }
