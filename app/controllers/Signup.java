@@ -20,7 +20,7 @@ public class Signup extends Controller {
 
         UserInfo u = new UserInfo(user, pass, email);
 
-        u.password.save();
+        //  u.password.save();
 
         //  Insert in DB?
 

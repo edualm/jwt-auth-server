@@ -35,9 +35,9 @@ public class UserInfo extends Model {
     @Column(unique = true)
     public String username;
 
-    @OneToOne
+    /*@OneToOne
     @Constraints.Required
-    public Password password;
+    public Password password;*/
 
     @Constraints.Required
     @Column(unique = true)
@@ -50,11 +50,11 @@ public class UserInfo extends Model {
 
         this.username = username;
 
-        try {
+        /*try {
             this.password = new Password(password);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
+        }*/
 
         this.emailAddress = emailAddress;
     }
