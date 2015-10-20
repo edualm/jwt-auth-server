@@ -26,7 +26,8 @@ import java.util.HashMap;
 public class UserInfo extends Model {
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name="user_id_seq", sequenceName="user_id_seq", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="user_id_seq")
     @Column(unique = true)
     public Long id;
 

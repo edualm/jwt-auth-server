@@ -24,7 +24,8 @@ public class Password extends Model {
     //  Partially stolen from https://www.owasp.org/index.php/Hashing_Java
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name="password_id_seq", sequenceName="password_id_seq", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="password_id_seq")
     @Column(unique = true)
     public Long id;
 

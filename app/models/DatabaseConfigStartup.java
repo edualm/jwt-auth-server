@@ -21,7 +21,7 @@ public class DatabaseConfigStartup implements ServerConfigStartup {
 
         dbIdentity.setSupportsGetGeneratedKeys(false);
         dbIdentity.setSupportsSequence(true);
-        dbIdentity.setIdType(IdType.GENERATOR);
+        dbIdentity.setIdType(IdType.SEQUENCE);
 
         serverConfig.setDatabasePlatform(postgresPlatform);
     }
