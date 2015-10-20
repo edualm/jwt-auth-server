@@ -10,4 +10,4 @@ CREATE TABLE demo (
 
 # --- !Downs
 
-DROP TABLE Demo;
+DROP TABLE demo;
