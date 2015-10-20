@@ -6,7 +6,8 @@
 GET     /                           controllers.Application.index()
 POST    /register                   controllers.Signup.signup()
 POST    /login                      controllers.Authenticate.login()
-GET     /debug/showAllUsers         controllers.Authenticate.debugShowAllUsers()
+GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
+GET     /debug/createJWT            controllers.Debug.createJWT()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

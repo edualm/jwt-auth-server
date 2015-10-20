@@ -1,12 +1,10 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Model;
 import models.Password;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
-import play.libs.Json;
 import play.mvc.*;
 
 import java.util.List;
@@ -43,12 +41,6 @@ public class Authenticate extends Controller {
         } catch (Exception e) {
             return internalServerError(e.getMessage());
         }
-    }
-
-    public Result debugShowAllUsers() {
-        List<UserData> users = Ebean.find(UserData.class).findList();
-
-        return ok(Json.stringify(Json.toJson(users)));
     }
 
 }
