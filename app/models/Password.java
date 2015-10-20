@@ -40,7 +40,7 @@ public class Password extends Model {
 
         random.nextBytes(bSalt);
 
-        byte[] bDigest = getHash(User.kIterationCount, password, bSalt);
+        byte[] bDigest = getHash(kIterationCount, password, bSalt);
 
         this.digest = byteToBase64(bDigest);
         this.salt = byteToBase64(bSalt);
@@ -55,7 +55,7 @@ public class Password extends Model {
         byte[] digest = base64ToByte(this.digest);
         byte[] salt = base64ToByte(this.salt);
 
-        byte[] hash = getHash(User.kIterationCount, password, salt);
+        byte[] hash = getHash(kIterationCount, password, salt);
 
         return Arrays.equals(digest, hash);
     }

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Password.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.java" afterPath="$PROJECT_DIR$/app/models/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Password.java" afterPath="$PROJECT_DIR$/app/models/Password.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="Password.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Password.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4679487">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.2243589">
+              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -726,7 +725,7 @@
       <workItem from="1445280760407" duration="1449000" />
       <workItem from="1445282893377" duration="837000" />
       <workItem from="1445285121983" duration="3006000" />
-      <workItem from="1445333027365" duration="4854000" />
+      <workItem from="1445333027365" duration="5000000" />
     </task>
     <task id="LOCAL-00001" summary="Security, check!">
       <created>1445286181725</created>
@@ -776,11 +775,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445339755813</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Some minor refactoring.">
+      <created>1445339944536</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1445339944536</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10146000" />
+    <option name="totallyTimeSpent" value="10292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -837,7 +842,8 @@
     <MESSAGE value="Another test... :v" />
     <MESSAGE value="Maybe now? :3" />
     <MESSAGE value="Changed evolutions method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed evolutions method." />
+    <MESSAGE value="Some minor refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some minor refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1092,8 +1098,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Password.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4679487">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.2243589">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
