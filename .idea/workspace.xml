@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="Forgot the @Entity...">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/evolutions/default/1.sql" afterPath="$PROJECT_DIR$/conf/evolutions/default/1.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/UserData.java" afterPath="$PROJECT_DIR$/app/models/UserData.java" />
     </list>
     <ignored path="jwt-auth-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +56,8 @@
       <file leaf-file-name="1.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/evolutions/default/1.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25245443">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.31556803">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -106,8 +105,8 @@
         <option value="$PROJECT_DIR$/app/controllers/Signup.java" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/models/User.java" />
-        <option value="$PROJECT_DIR$/conf/evolutions/default/1.sql" />
         <option value="$PROJECT_DIR$/app/models/UserData.java" />
+        <option value="$PROJECT_DIR$/conf/evolutions/default/1.sql" />
       </list>
     </option>
   </component>
@@ -667,7 +666,7 @@
       <workItem from="1445282893377" duration="837000" />
       <workItem from="1445285121983" duration="3006000" />
       <workItem from="1445333027365" duration="8535000" />
-      <workItem from="1445346022537" duration="10871000" />
+      <workItem from="1445346022537" duration="10994000" />
     </task>
     <task id="LOCAL-00001" summary="Security, check!">
       <created>1445286181725</created>
@@ -889,7 +888,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24698000" />
+    <option name="totallyTimeSpent" value="24821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
@@ -1296,8 +1295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/evolutions/default/1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25245443">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.31556803">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
       </provider>
