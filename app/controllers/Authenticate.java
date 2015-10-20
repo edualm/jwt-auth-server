@@ -40,7 +40,7 @@ public class Authenticate extends Controller {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
             if (pi.validate(pass)) {
-                return ok("{\"success\": true, \"jwt\": " + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false) + "}");
+                return ok("{\"success\": true, \"jwt\": \"" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false) + "\"}");
             } else {
                 return notFound("{\"error\": \"Wrong password!\"}");
             }

@@ -15,6 +15,7 @@ public class Config {
         if (jsonWebKey == null)
             try {
                 jsonWebKey = RsaJwkGenerator.generateJwk(2048);
+                jsonWebKey.setKeyId("ldso");
             } catch (JoseException e) {
                 System.out.println(e.getMessage());
             }
