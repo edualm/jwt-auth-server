@@ -37,8 +37,6 @@ public class Signup extends Controller {
         d.foo = "123";
         d.id = 10;
 
-        Ebean.createsql
-
         Ebean.save(d);
 
         //  d.save();
