@@ -1,5 +1,6 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Model;
 import models.UserData;
 import play.data.DynamicForm;
@@ -20,9 +21,7 @@ public class Authenticate extends Controller {
 
         String user = form.get("username");
 
-        Model.Finder<Long, UserData> find = new Model.Finder<Long, UserData>(UserData.class);
-
-        List<UserData> users = find.where().eq("username", user).findList();
+        List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0) {
             return notFound("User not found!");
