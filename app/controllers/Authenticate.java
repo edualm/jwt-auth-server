@@ -30,4 +30,10 @@ public class Authenticate extends Controller {
         return ok(Json.stringify(Json.toJson(users.get(0))));
     }
 
+    public Result debugShowAllUsers() {
+        List<UserData> users = Ebean.find(UserData.class).findList();
+
+        return ok(Json.stringify(Json.toJson(users)));
+    }
+
 }
