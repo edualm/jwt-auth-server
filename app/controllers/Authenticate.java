@@ -2,6 +2,7 @@ package controllers;
 
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Model;
+import models.Password;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
@@ -27,7 +28,21 @@ public class Authenticate extends Controller {
             return notFound("User not found!");
         }
 
-        return ok(Json.stringify(Json.toJson(users.get(0))));
+        UserData u = users.get(0);
+
+        String password = form.get("password");
+
+        try {
+            Password pi = new Password(u.passwordDigest, u.passwordSalt);
+
+            if (pi.validate(password)) {
+                return ok("Login OK!");
+            } else {
+                return notFound("Password failure...");
+            }
+        } catch (Exception e) {
+            return internalServerError(e.getMessage());
+        }
     }
 
     public Result debugShowAllUsers() {
