@@ -25,8 +25,9 @@ public class Password extends Model {
 
     @Id
     @Column(unique = true)
-    @SequenceGenerator(name="password_gen", sequenceName = "password_idcolumn_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "password_gen")
+    //  @SequenceGenerator(name="password_gen", sequenceName = "password_idcolumn_seq", allocationSize = 1)
+    //  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "password_gen")
+    @GeneratedValue(strategy = GenerationType.TABLE)
     public Long id;
 
     @Constraints.Required
