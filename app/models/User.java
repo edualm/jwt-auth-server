@@ -41,7 +41,7 @@ public class User extends Model {
     @Column(unique = true)
     public String emailAddress;
 
-    public HashMap<String, String> additional;
+    //  public HashMap<String, String> additional;
 
     public User(String username, String password, String emailAddress) {
         this.id = Integer.toUnsignedLong(10);
