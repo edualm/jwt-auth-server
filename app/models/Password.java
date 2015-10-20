@@ -5,6 +5,7 @@ import play.data.validation.Constraints;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class Password extends Model {
     //  Partially stolen from https://www.owasp.org/index.php/Hashing_Java
 
     @Id
+    @Column(unique = true)
     public Long id;
 
     @Constraints.Required
@@ -47,6 +49,7 @@ public class Password extends Model {
     }
 
     public Password(String digest, String salt) {
+        this.id = Integer.toUnsignedLong(20);
         this.digest = digest;
         this.salt = salt;
     }
