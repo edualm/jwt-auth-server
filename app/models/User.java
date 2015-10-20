@@ -43,7 +43,7 @@ public class User extends Model {
 
     public HashMap<String, String> additional;
 
-    /*public User(String username, String password, String emailAddress) {
+    public User(String username, String password, String emailAddress) {
         this.id = Integer.toUnsignedLong(10);
 
         this.username = username;
@@ -55,5 +55,5 @@ public class User extends Model {
         }
 
         this.emailAddress = emailAddress;
-    }*/
+    }
 }
