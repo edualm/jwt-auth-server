@@ -2,7 +2,7 @@
 
 # --- !Ups
 
-CREATE TABLE user (
+CREATE TABLE userdata (
   id  SERIAL,
   username  VARCHAR(64) NOT NULL,
   passwordDigest  VARCHAR(256) NOT NULL,
@@ -13,4 +13,4 @@ CREATE TABLE user (
 
 # --- !Downs
 
-DROP TABLE user;
+DROP TABLE userdata;

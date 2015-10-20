@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 
 @Entity
-public class User extends Model {
+public class UserData extends Model {
 
     @Id
     @SequenceGenerator(name="user_id_seq", sequenceName="user_id_seq", allocationSize=1)
@@ -35,7 +35,7 @@ public class User extends Model {
 
     //  public HashMap<String, String> additional;
 
-    public User(String username, String password, String emailAddress) {
+    public UserData(String username, String password, String emailAddress) {
         this.username = username;
         this.emailAddress = emailAddress;
 
