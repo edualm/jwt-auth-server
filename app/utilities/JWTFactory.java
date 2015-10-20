@@ -1,12 +1,16 @@
 package utilities;
 
+import models.UserData;
 import org.jose4j.jwk.RsaJsonWebKey;
 import org.jose4j.jwk.RsaJwkGenerator;
 import org.jose4j.jws.AlgorithmIdentifiers;
 import org.jose4j.jws.JsonWebSignature;
 import org.jose4j.jwt.JwtClaims;
 import org.jose4j.lang.JoseException;
+import play.mvc.Http;
 
+import java.math.BigInteger;
+import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,14 +32,14 @@ public class JWTFactory {
 
         // Create the Claims, which will be the content of the JWT
         JwtClaims claims = new JwtClaims();
-        claims.setIssuer("Issuer");  // who creates the token and signs it
+        claims.setIssuer(Config.ServerName);  // who creates the token and signs it
         claims.setAudience("Audience"); // to whom the token is intended to be sent
         claims.setExpirationTimeMinutesInTheFuture(10); // time when the token will expire (10 minutes from now)
         claims.setGeneratedJwtId(); // a unique identifier for the token
         claims.setIssuedAtToNow();  // when the token was issued/created (now)
         claims.setNotBeforeMinutesInThePast(2); // time before which the token is not yet valid (2 minutes ago)
         claims.setSubject("subject"); // the subject/principal is whom the token is about
-        claims.setClaim("email","mail@example.com"); // additional claims/attributes about the subject can be added
+        claims.setClaim("email", "mail@example.com"); // additional claims/attributes about the subject can be added
         List<String> groups = Arrays.asList("group-one", "other-group", "group-three");
         claims.setStringListClaim("groups", groups); // multi-valued claims work too and will end up as a JSON array
 
@@ -65,11 +69,32 @@ public class JWTFactory {
 
         String jwt = jws.getCompactSerialization();
 
-        System.out.println("JWT: " + jwt);
+        return jwt + " " + rsaJsonWebKey.getPublicKey() + " " + rsaJsonWebKey.getPrivateKey();
+    }
+
+    public static String createAuthenticationJWT(RsaJsonWebKey webKey, UserData user, String ip, boolean longToken)
+            throws JoseException {
+        JwtClaims claims = new JwtClaims();
+
+        claims.setIssuer(Config.ServerName);  // who creates the token and signs it
+        claims.setAudience("az-ldso"); // to whom the token is intended to be sent
+        claims.setExpirationTimeMinutesInTheFuture(longToken ? 20160 : 120); // 2 weeks or 2 hours
+        claims.setGeneratedJwtId(); // a unique identifier for the token
+        claims.setIssuedAtToNow();  // when the token was issued/created (now)
+        claims.setNotBeforeMinutesInThePast(2); // time before which the token is not yet valid (2 minutes ago)
+        claims.setSubject("auth"); // the subject/principal is whom the token is about
+        claims.setClaim("username", user.username); // additional claims/attributes about the subject can be added
+        claims.setClaim("ip", ip);
+
+        JsonWebSignature jws = new JsonWebSignature();
+
+        jws.setPayload(claims.toJson());
+        jws.setKey(webKey.getPrivateKey());
+        jws.setKeyIdHeaderValue(webKey.getKeyId());
+        jws.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA256);
+
+        String jwt = jws.getCompactSerialization();
 
         return jwt;
-
-        // Now you can do something with the JWT. Like send it to some other party
-        // over the clouds and through the interwebs.
     }
 }

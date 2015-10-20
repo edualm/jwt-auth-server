@@ -19,6 +19,13 @@ public class Authenticate extends Controller {
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");
+        String pass = form.get("password");
+
+        if (user == null || user == "")
+            return notFound("{\"error\": \"Missing field: \"username\"\"}");
+
+        if (pass == null || pass == "")
+            return notFound("{\"error\": \"Missing field: \"password\"\"}");
 
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
@@ -28,15 +35,13 @@ public class Authenticate extends Controller {
 
         UserData u = users.get(0);
 
-        String password = form.get("password");
-
         try {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
-            if (pi.validate(password)) {
-                return ok("Login OK!");
+            if (pi.validate(pass)) {
+                return ok("{\"success\": true, \"jwt\": nil}");
             } else {
-                return notFound("Password failure...");
+                return notFound("{\"error\": \"Wrong password!\"}");
             }
         } catch (Exception e) {
             return internalServerError(e.getMessage());
