@@ -35,6 +35,7 @@ public class Signup extends Controller {
         Demo d = new Demo();
 
         d.foo = "123";
+        d.id = 10;
 
         //  Ebean.save(d);
 
