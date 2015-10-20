@@ -15,12 +15,12 @@ public class DatabaseConfigStartup implements ServerConfigStartup {
     public void onStart(ServerConfig serverConfig) {
         serverConfig.setDatabaseSequenceBatchSize(1);
 
-        PostgresPlatform postgresPlatform = new PostgresPlatform();
+        /*PostgresPlatform postgresPlatform = new PostgresPlatform();
         DbIdentity dbIdentity = postgresPlatform.getDbIdentity();
         dbIdentity.setSupportsGetGeneratedKeys(false);
         dbIdentity.setSupportsSequence(true);
         dbIdentity.setIdType(IdType.GENERATOR);
-        serverConfig.setDatabasePlatform(postgresPlatform);
+        serverConfig.setDatabasePlatform(postgresPlatform);*/
     }
 
 }
