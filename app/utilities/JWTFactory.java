@@ -72,7 +72,7 @@ public class JWTFactory {
         return jwt + " " + rsaJsonWebKey.getPublicKey() + " " + rsaJsonWebKey.getPrivateKey();
     }
 
-    public static String createAuthenticationJWT(RsaJsonWebKey webKey, UserData user, String ip, boolean longToken)
+    public static String createAuthenticationJWT(UserData user, String ip, boolean longToken)
             throws JoseException {
         JwtClaims claims = new JwtClaims();
 
@@ -89,8 +89,8 @@ public class JWTFactory {
         JsonWebSignature jws = new JsonWebSignature();
 
         jws.setPayload(claims.toJson());
-        jws.setKey(webKey.getPrivateKey());
-        jws.setKeyIdHeaderValue(webKey.getKeyId());
+        jws.setKey(Config.getJsonWebKey().getPrivateKey());
+        jws.setKeyIdHeaderValue(Config.getJsonWebKey().getKeyId());
         jws.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA256);
 
         String jwt = jws.getCompactSerialization();
