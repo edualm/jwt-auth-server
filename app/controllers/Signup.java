@@ -37,9 +37,9 @@ public class Signup extends Controller {
         d.foo = "123";
         d.id = 10;
 
-        //  Ebean.save(d);
+        Ebean.save(d);
 
-        d.save();
+        //  d.save();
 
         return ok("Signup successful!" );
     }
