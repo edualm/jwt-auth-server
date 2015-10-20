@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class UserData extends Model {
 
     @Id
-    @SequenceGenerator(name="user_id_seq", sequenceName="user_id_seq", allocationSize=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="user_id_seq")
+    @SequenceGenerator(name="userdata_id_seq", sequenceName="userdata_id_seq", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="userdata_id_seq")
     @Column(unique = true)
     public Integer id;
 
