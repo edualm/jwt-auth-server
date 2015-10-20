@@ -26,12 +26,15 @@ import java.util.HashMap;
 public class User extends Model {
     @Id
     @Column(unique = true)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     public Long id;
 
     @Constraints.Required
     @Column(unique = true)
     public String username;
 
+    @OneToOne
     @Constraints.Required
     public Password password;
 
