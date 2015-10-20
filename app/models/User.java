@@ -26,8 +26,7 @@ import java.util.HashMap;
 public class User extends Model {
     @Id
     @Column(unique = true)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-
+    //  @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
     @Constraints.Required
@@ -45,6 +44,8 @@ public class User extends Model {
     public HashMap<String, String> additional;
 
     public User(String username, String password, String emailAddress) {
+        this.id = Integer.toUnsignedLong(10);
+
         this.username = username;
 
         try {
