@@ -1,7 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Model;
-import models.User;
+import models.UserInfo;
 import play.libs.Json;
 import play.mvc.*;
 
@@ -11,7 +11,7 @@ import play.mvc.*;
 public class Authenticate extends Controller {
 
     public Result login() {
-        Model.Finder<Long, User> find = new Model.Finder<Long, User>(User.class);
+        Model.Finder<Long, UserInfo> find = new Model.Finder<Long, UserInfo>(UserInfo.class);
 
         return ok(Json.stringify(Json.toJson(find.findList())));
     }

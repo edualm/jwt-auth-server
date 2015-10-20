@@ -23,7 +23,7 @@ import java.util.HashMap;
  */
 
 @Entity
-public class User extends Model {
+public class UserInfo extends Model {
     @Id
     @Column(unique = true)
     @SequenceGenerator(name="user_gen", sequenceName = "user_idcolumn_seq", allocationSize = 1)
@@ -45,7 +45,7 @@ public class User extends Model {
 
     //  public HashMap<String, String> additional;
 
-    public User(String username, String password, String emailAddress) {
+    public UserInfo(String username, String password, String emailAddress) {
         this.id = Integer.toUnsignedLong(10);
 
         this.username = username;

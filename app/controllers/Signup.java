@@ -18,7 +18,7 @@ public class Signup extends Controller {
 
         String email = form.get("email");
 
-        User u = new User(user, pass, email);
+        UserInfo u = new UserInfo(user, pass, email);
 
         u.password.save();
 
