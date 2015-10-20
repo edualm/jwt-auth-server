@@ -12,7 +12,7 @@ public class Authenticate extends Controller {
 
     public Result login() {
         Model.Finder<Long, User> find = new Model.Finder<Long, User>(User.class);
-        
+
         return ok(Json.stringify(Json.toJson(find.findList())));
     }
 

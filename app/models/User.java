@@ -25,15 +25,18 @@ import java.util.HashMap;
 @Entity
 public class User extends Model {
     @Id
+    @Column(unique = true)
     public Long id;
 
     @Constraints.Required
+    @Column(unique = true)
     public String username;
 
     @Constraints.Required
     public Password password;
 
     @Constraints.Required
+    @Column(unique = true)
     public String emailAddress;
 
     public HashMap<String, String> additional;
