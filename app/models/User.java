@@ -17,15 +17,17 @@ public class User extends Model {
     @SequenceGenerator(name="user_id_seq", sequenceName="user_id_seq", allocationSize=1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="user_id_seq")
     @Column(unique = true)
-    public Long id;
+    public Integer id;
 
     @Constraints.Required
     @Column(unique = true)
     public String username;
 
-    @OneToOne
     @Constraints.Required
-    public Password password;
+    public String passwordDigest;
+
+    @Constraints.Required
+    public String passwordSalt;
 
     @Constraints.Required
     @Column(unique = true)
@@ -34,16 +36,16 @@ public class User extends Model {
     //  public HashMap<String, String> additional;
 
     public User(String username, String password, String emailAddress) {
-        this.id = Integer.toUnsignedLong(10);
-
         this.username = username;
+        this.emailAddress = emailAddress;
 
         try {
-            this.password = new Password(password);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+            Password p = new Password(password);
 
-        this.emailAddress = emailAddress;
+            this.passwordDigest = p.digest;
+            this.passwordSalt = p.salt;
+        } catch (Exception e) {
+
+        }
     }
 }

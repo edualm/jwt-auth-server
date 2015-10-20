@@ -18,21 +18,12 @@ import java.util.Arrays;
  */
 
 @Entity
-public class Password extends Model {
+public class Password {
     private static int kIterationCount = 1024;
 
     //  Partially stolen from https://www.owasp.org/index.php/Hashing_Java
 
-    @Id
-    @SequenceGenerator(name="password_id_seq", sequenceName="password_id_seq", allocationSize=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="password_id_seq")
-    @Column(unique = true)
-    public Long id;
-
-    @Constraints.Required
     public String digest;
-
-    @Constraints.Required
     public String salt;
 
     public Password(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
@@ -49,7 +40,6 @@ public class Password extends Model {
     }
 
     public Password(String digest, String salt) {
-        this.id = Integer.toUnsignedLong(20);
         this.digest = digest;
         this.salt = salt;
     }

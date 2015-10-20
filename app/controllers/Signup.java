@@ -17,7 +17,7 @@ public class Signup extends Controller {
 
     @Transactional
     public Result signup() {
-        /*DynamicForm form = Form.form().bindFromRequest();
+        DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");
         String pass = form.get("password");
@@ -26,20 +26,7 @@ public class Signup extends Controller {
 
         User u = new User(user, pass, email);
 
-        //  u.password.save();
-
-        //  Insert in DB?
-
-        u.save();*/
-
-        Demo d = new Demo();
-
-        d.foo = "123";
-        d.id = 10;
-
-        Ebean.save(d);
-
-        //  d.save();
+        u.save();
 
         return ok("Signup successful!" );
     }
