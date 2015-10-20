@@ -26,9 +26,9 @@ import java.util.HashMap;
 public class User extends Model {
     @Id
     @Column(unique = true)
-    //  @SequenceGenerator(name="user_gen", sequenceName = "user_idcolumn_seq", allocationSize = 1)
-    //  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @SequenceGenerator(name="user_gen", sequenceName = "user_idcolumn_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
+    //@GeneratedValue(strategy = GenerationType.TABLE)
     public Long id;
 
     @Constraints.Required
