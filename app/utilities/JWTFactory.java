@@ -76,14 +76,15 @@ public class JWTFactory {
             throws JoseException {
         JwtClaims claims = new JwtClaims();
 
-        claims.setIssuer(Config.ServerName);  // who creates the token and signs it
-        claims.setAudience("az-ldso"); // to whom the token is intended to be sent
+        claims.setIssuer(Config.ServerName);
+        claims.setAudience("az-ldso");
         claims.setExpirationTimeMinutesInTheFuture(longToken ? 20160 : 120); // 2 weeks or 2 hours
-        claims.setGeneratedJwtId(); // a unique identifier for the token
-        claims.setIssuedAtToNow();  // when the token was issued/created (now)
-        claims.setNotBeforeMinutesInThePast(2); // time before which the token is not yet valid (2 minutes ago)
-        claims.setSubject("auth"); // the subject/principal is whom the token is about
-        claims.setClaim("username", user.username); // additional claims/attributes about the subject can be added
+        claims.setGeneratedJwtId();
+        claims.setIssuedAtToNow();
+        claims.setNotBeforeMinutesInThePast(2);
+        claims.setSubject("auth");
+        claims.setClaim("username", user.username);
+        claims.setClaim("id", user.id);
         claims.setClaim("ip", ip);
 
         JsonWebSignature jws = new JsonWebSignature();

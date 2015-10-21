@@ -5,6 +5,7 @@ import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 
 import javax.persistence.*;
+import java.util.HashMap;
 
 /**
  * Created by MegaEduX on 19/10/15.
@@ -33,8 +34,6 @@ public class UserData extends Model {
     @Column(unique = true)
     public String emailAddress;
 
-    //  public HashMap<String, String> additional;
-
     public UserData(String username, String password, String emailAddress) {
         this.username = username;
         this.emailAddress = emailAddress;
@@ -47,5 +46,9 @@ public class UserData extends Model {
         } catch (Exception e) {
 
         }
+    }
+
+    public HashMap<String, String> getAttributes() {
+        return null;
     }
 }
