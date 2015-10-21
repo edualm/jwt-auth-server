@@ -9,6 +9,7 @@ import org.jose4j.lang.JoseException;
  */
 public class Config {
     static public final String ServerName = "jwt-auth-server";
+    static public final Integer MinimumPasswordLength = 8;
     static private RsaJsonWebKey jsonWebKey = null;
 
     static RsaJsonWebKey getJsonWebKey() {

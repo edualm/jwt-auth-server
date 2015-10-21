@@ -26,13 +26,13 @@ public class Signup extends Controller {
         String email = form.get("email");
 
         if (user == null || user == "")
-            return notFound("{\"error\": \"Missing field: \"username\"\"}");
+            return notFound("{\"error\": \"Missing field: \"username\".\"}");
 
         if (pass == null || pass == "")
-            return notFound("{\"error\": \"Missing field: \"password\"\"}");
+            return notFound("{\"error\": \"Missing field: \"password\".\"}");
 
         if (email == null || email == "")
-            return notFound("{\"error\": \"Missing field: \"email\"\"}");
+            return notFound("{\"error\": \"Missing field: \"email\".\"}");
 
         if (Ebean.find(UserData.class).where().eq("username", user).findList().size() != 0)
             return notFound("{\"error\": \"A user with this username or e-mail already exists!\"}");

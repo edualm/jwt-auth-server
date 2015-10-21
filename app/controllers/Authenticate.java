@@ -23,18 +23,20 @@ public class Authenticate extends Controller {
         String pass = form.get("password");
 
         if (user == null || user == "")
-            return notFound("{\"error\": \"Missing field: \"username\"\"}");
+            return notFound("{\"error\": \"Missing field: \"username\".\"}");
 
         if (pass == null || pass == "")
-            return notFound("{\"error\": \"Missing field: \"password\"\"}");
+            return notFound("{\"error\": \"Missing field: \"password\".\"}");
 
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
-        if (users.size() == 0) {
+        if (users.size() == 0)
             return notFound("User not found!");
-        }
 
         UserData u = users.get(0);
+
+        if (!u.enabled)
+            return notFound("{\"error\": \"Resource disabled.\"}");
 
         try {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);

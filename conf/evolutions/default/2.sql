@@ -1,4 +1,4 @@
-# JWT-Auth-Server schema
+# User Attribute table
 
 # --- !Ups
 

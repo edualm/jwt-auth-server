@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Entity
 public class UserAttribute extends Model {
     @Id
-    @SequenceGenerator(name="user_attribute_id_seq", sequenceName="user_attribute_id_seq", allocationSize=1)
+    @SequenceGenerator(name = "user_attribute_id_seq", sequenceName = "user_attribute_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="user_attribute_id_seq")
     @Column(unique = true)
     public Integer id;
