@@ -12,7 +12,7 @@ public class Config {
     static public final Integer MinimumPasswordLength = 8;
     static private RsaJsonWebKey jsonWebKey = null;
 
-    static RsaJsonWebKey getJsonWebKey() {
+    static public RsaJsonWebKey getJsonWebKey() {
         if (jsonWebKey == null)
             try {
                 jsonWebKey = RsaJwkGenerator.generateJwk(2048);

@@ -77,7 +77,7 @@ public class JWTFactory {
         JwtClaims claims = new JwtClaims();
 
         claims.setIssuer(Config.ServerName);
-        claims.setAudience("az-ldso");
+        claims.setAudience(Config.ServerName);
         claims.setExpirationTimeMinutesInTheFuture(longToken ? 20160 : 120); // 2 weeks or 2 hours
         claims.setGeneratedJwtId();
         claims.setIssuedAtToNow();
@@ -94,8 +94,6 @@ public class JWTFactory {
         jws.setKeyIdHeaderValue(Config.getJsonWebKey().getKeyId());
         jws.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA256);
 
-        String jwt = jws.getCompactSerialization();
-
-        return jwt;
+        return jws.getCompactSerialization();
     }
 }
