@@ -11,10 +11,6 @@ import java.util.Collection;
  */
 
 public class Endpoint extends Model {
-    //  allowed groups
-    //  admin groups
-    //  super moderator groups
-
     @Id
     @SequenceGenerator(name = "endpoint_id_seq", sequenceName = "endpoint_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "endpoint_id_seq")

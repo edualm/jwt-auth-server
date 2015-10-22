@@ -6,6 +6,8 @@ import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
+import sun.misc.BASE64Encoder;
+import utilities.Config;
 import utilities.JWTFactory;
 
 import java.util.List;
@@ -51,4 +53,7 @@ public class Authenticate extends Controller {
         }
     }
 
+    public Result getJWTPublicKey() {
+        return ok(new BASE64Encoder().encode(Config.getJsonWebKey().getPublicKey().getEncoded()));
+    }
 }

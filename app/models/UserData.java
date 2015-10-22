@@ -8,7 +8,6 @@ import utilities.Config;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -58,8 +57,11 @@ public class UserData extends Model {
     @Constraints.Required
     public Timestamp signupTime;
 
+    @OneToMany(mappedBy = "user")
+    public List<UserAttribute> attributes;
+
     @ManyToMany(mappedBy = "users")
-    public Collection<Group> groups;
+    public List<Group> groups;
 
     public UserData(String username, String password, String emailAddress) {
         this.username = username;
@@ -76,10 +78,6 @@ public class UserData extends Model {
 
         this.enabled = true;
         this.signupTime = new Timestamp((new Date()).getTime());
-    }
-
-    public List<UserAttribute> getAttributes() {
-        return Ebean.find(UserAttribute.class).where().eq("user_id", id).findList();
     }
 
     public void addAttribute(String k, String v) throws AttributeAlreadyExistsException {

@@ -17,9 +17,9 @@ public class UserAttribute extends Model {
     @Column(unique = true)
     public Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name="user_id", referencedColumnName = "id")
-    public Integer userId;
+    public UserData user;
 
     @Constraints.Required
     public String key;
@@ -27,7 +27,7 @@ public class UserAttribute extends Model {
     public String value;
 
     public UserAttribute(UserData user, String attributeKey, String attributeValue) {
-        userId = user.id;
+        this.user = user;
 
         key = attributeKey;
         value = attributeValue;

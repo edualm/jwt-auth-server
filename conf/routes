@@ -8,6 +8,8 @@ GET     /                           controllers.Application.index()
 POST    /register                   controllers.Signup.signup()
 POST    /login                      controllers.Authenticate.login()
 
+GET     /rsa/pub/base64             controllers.Authenticate.getJWTPublicKey()
+
 GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
 GET     /debug/createJWT            controllers.Debug.createJWT()
 

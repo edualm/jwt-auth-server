@@ -72,6 +72,7 @@ public class Password {
 
     private byte[] base64ToByte(String data) throws IOException {
         BASE64Decoder decoder = new BASE64Decoder();
+
         return decoder.decodeBuffer(data);
     }
 

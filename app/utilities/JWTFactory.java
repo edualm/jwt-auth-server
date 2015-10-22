@@ -1,16 +1,14 @@
 package utilities;
 
 import models.UserData;
+
 import org.jose4j.jwk.RsaJsonWebKey;
 import org.jose4j.jwk.RsaJwkGenerator;
 import org.jose4j.jws.AlgorithmIdentifiers;
 import org.jose4j.jws.JsonWebSignature;
 import org.jose4j.jwt.JwtClaims;
 import org.jose4j.lang.JoseException;
-import play.mvc.Http;
 
-import java.math.BigInteger;
-import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 import java.util.List;
 
@@ -74,15 +72,20 @@ public class JWTFactory {
 
     public static String createAuthenticationJWT(UserData user, String ip, boolean longToken)
             throws JoseException {
+        return createAuthenticationJWT(user, ip, "auth", Config.ServerName, longToken);
+    }
+
+    public static String createAuthenticationJWT(UserData user, String ip, String audience, String subject, boolean longToken)
+            throws JoseException {
         JwtClaims claims = new JwtClaims();
 
         claims.setIssuer(Config.ServerName);
-        claims.setAudience(Config.ServerName);
+        claims.setAudience(audience);
         claims.setExpirationTimeMinutesInTheFuture(longToken ? 20160 : 120); // 2 weeks or 2 hours
         claims.setGeneratedJwtId();
         claims.setIssuedAtToNow();
         claims.setNotBeforeMinutesInThePast(2);
-        claims.setSubject("auth");
+        claims.setSubject(subject);
         claims.setClaim("username", user.username);
         claims.setClaim("id", user.id);
         claims.setClaim("ip", ip);
