@@ -8,6 +8,7 @@ import utilities.Config;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -56,6 +57,9 @@ public class UserData extends Model {
 
     @Constraints.Required
     public Timestamp signupTime;
+
+    @ManyToMany(mappedBy = "users")
+    public Collection<Group> groups;
 
     public UserData(String username, String password, String emailAddress) {
         this.username = username;
