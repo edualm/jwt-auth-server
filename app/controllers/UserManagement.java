@@ -28,7 +28,7 @@ public class UserManagement extends Controller {
 
             String pass = form.get("password");
 
-            if (pass == null || pass == "")
+            if (pass == null || pass.equals(""))
                 return notFound("{\"error\": \"Missing field: \"password\".\"}");
 
             try {
@@ -60,12 +60,10 @@ public class UserManagement extends Controller {
 
         JwtClaims claims = jwtConsumer.processToClaims(jwt);
 
-        Integer id = (Integer) claims.getClaimValue("id");
+        Long id = (Long) claims.getClaimValue("id");
 
         List<UserData> users = Ebean.find(UserData.class).where().eq("id", id).findList();
 
-        UserData u = users.get(0);
-
-        return u;
+        return users.get(0);
     }
 }
