@@ -59,8 +59,8 @@
       <file leaf-file-name="UserManagement.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42553192">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.4574468">
+              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -776,7 +776,7 @@
       <workItem from="1445333027365" duration="8535000" />
       <workItem from="1445346022537" duration="21925000" />
       <workItem from="1445438851221" duration="3656000" />
-      <workItem from="1445503789929" duration="4593000" />
+      <workItem from="1445503789929" duration="5210000" />
     </task>
     <task id="LOCAL-00001" summary="Security, check!">
       <created>1445286181725</created>
@@ -1060,11 +1060,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445508709323</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Fixed Long to Int cast.">
+      <created>1445509428025</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1445509428025</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44001000" />
+    <option name="totallyTimeSpent" value="44618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -1113,7 +1119,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Try #3 of AIAD..." />
     <MESSAGE value="Try #4 of AIAD..." />
     <MESSAGE value="Try #5 of AIAD..." />
     <MESSAGE value="Try #6 of AIAD..." />
@@ -1138,7 +1143,8 @@
     <MESSAGE value="Added &quot;Attribute&quot; on User (allows for groups, permissions, etc etc)." />
     <MESSAGE value="Added password modification, enabled/disabled check, and a few crap more." />
     <MESSAGE value="Added change password." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added change password." />
+    <MESSAGE value="Fixed Long to Int cast." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Long to Int cast." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1578,8 +1584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42553192">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.4574468">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

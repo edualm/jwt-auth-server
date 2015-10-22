@@ -55,7 +55,7 @@ public class UserManagement extends Controller {
                 .setRequireSubject()
                 .setExpectedIssuer(Config.ServerName)
                 .setExpectedAudience(Config.ServerName)
-                .setVerificationKey(Config.getJsonWebKey().getKey())
+                .setVerificationKey(Config.getJsonWebKey().getPublicKey())
                 .build();
 
         JwtClaims claims = jwtConsumer.processToClaims(jwt);
