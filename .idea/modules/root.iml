@@ -149,5 +149,22 @@
     <orderEntry type="library" name="SBT: postgresql:postgresql:9.1-901-1.jdbc4:jar" level="project" />
     <orderEntry type="library" name="SBT: org.postgresql:postgresql:9.3-1102-jdbc4:jar" level="project" />
     <orderEntry type="library" name="org.bitbucket.b_c:jose4j:0.4.4" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-jdbc-evolutions_2.11:2.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:bootstrap:3.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:jquery:1.11.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:requirejs:2.1.15:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:webjars-locator:0.23:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:webjars-locator-core:0.22:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:webjars-play_2.11:2.4.0-1:jar" level="project" />
+    <orderEntry type="module-library">
+      <library name="SBT: unmanaged-jars">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/slf4j-api-1.7.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/jose4j-0.4.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
