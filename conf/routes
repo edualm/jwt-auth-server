@@ -12,6 +12,7 @@ GET     /rsa/pub/base64             controllers.Authenticate.getJWTPublicKey()
 
 GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
 GET     /debug/createJWT            controllers.Debug.createJWT()
+GET     /debug/populate             controllers.Debug.populateWithTestData()
 
 POST    /user/changePassword        controllers.UserManagement.changePassword()
 
