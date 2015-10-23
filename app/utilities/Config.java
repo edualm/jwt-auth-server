@@ -1,11 +1,12 @@
 package utilities;
 
 import models.Configuration;
+
 import org.jose4j.jwk.PublicJsonWebKey;
 import org.jose4j.jwk.RsaJsonWebKey;
-import org.jose4j.jwk.RsaJwkGenerator;
 import org.jose4j.keys.RsaKeyUtil;
 import org.jose4j.lang.JoseException;
+
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -65,6 +66,8 @@ public class Config {
 
         pubKey.save();
         priKey.save();
+
+        setJsonWebKey(createKey(kp.getPublic(), kp.getPrivate()));
     }
 
     static private void loadJWTKeyPair() throws NoSuchAlgorithmException, IOException,
@@ -82,9 +85,13 @@ public class Config {
         PublicKey pubRecovered = kf.generatePublic(new X509EncodedKeySpec(decoder.decodeBuffer(pubKey.value)));
         PrivateKey priRecovered = kf.generatePrivate(new PKCS8EncodedKeySpec(decoder.decodeBuffer(priKey.value)));
 
-        RsaJsonWebKey rsaJwk = (RsaJsonWebKey) PublicJsonWebKey.Factory.newPublicJwk(pubRecovered);
-        rsaJwk.setPrivateKey(priRecovered);
+        Config.setJsonWebKey(createKey(pubRecovered, priRecovered));
+    }
 
-        Config.setJsonWebKey(rsaJwk);
+    static private RsaJsonWebKey createKey(PublicKey pub, PrivateKey pri) throws JoseException {
+        RsaJsonWebKey rsaJwk = (RsaJsonWebKey) PublicJsonWebKey.Factory.newPublicJwk(pub);
+        rsaJwk.setPrivateKey(pri);
+
+        return rsaJwk;
     }
 }
