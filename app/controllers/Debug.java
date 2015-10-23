@@ -2,6 +2,7 @@ package controllers;
 
 import com.avaje.ebean.Ebean;
 import models.Category;
+import models.UserAttribute;
 import models.UserData;
 import org.jose4j.lang.JoseException;
 import play.libs.Json;
@@ -18,7 +19,15 @@ public class Debug extends Controller {
     public Result showAllUsers() {
         List<UserData> users = Ebean.find(UserData.class).findList();
 
-        return ok(Json.stringify(Json.toJson(users)));
+        for (UserData u : users) {
+            for (UserAttribute a : u.attributes) {
+                System.out.println("(" + a.key + ", " + a.value + ")");
+            }
+        }
+
+        //  return ok(Json.stringify(Json.toJson(users)));
+
+        return ok();
     }
 
     public Result createJWT() {
