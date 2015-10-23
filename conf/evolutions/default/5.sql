@@ -10,8 +10,8 @@ CREATE TABLE group (
 );
 
 CREATE TABLE group_user (
-  group_id INT REFERENCES group(id),
-  user_id INT REFERENCES user_data(id),
+  group_id INT REFERENCES group(id) NOT NULL,
+  user_id INT REFERENCES user_data(id) NOT NULL,
   CONSTRAINT group_user_pkey PRIMARY KEY (group_id, user_id)
 );
 
