@@ -11,6 +11,7 @@ import java.util.Collection;
  * Created by MegaEduX on 22/10/15.
  */
 
+@Entity
 public class Group extends Model {
     private class UserAlreadyExistsException extends Exception {}
     private class UserNotFoundException extends Exception {}
