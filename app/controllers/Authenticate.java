@@ -36,7 +36,7 @@ public class Authenticate extends Controller {
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0)
-            return notFound(("{\"error\": \"User not found.\"}");
+            return notFound("{\"error\": \"User not found.\"}");
 
         UserData u = users.get(0);
 
