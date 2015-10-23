@@ -23,13 +23,13 @@ public class Endpoint extends Model {
 
     @JoinTable(name="endpoint_group_allow", joinColumns = @JoinColumn(name = "endpoint_id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
     @ManyToMany
-    public Collection<Group> allowedGroups;
+    public Collection<Category> allowedGroups;
 
     @JoinTable(name="endpoint_group_mod", joinColumns = @JoinColumn(name = "endpoint_id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
     @ManyToMany
-    public Collection<Group> moderatorGroups;
+    public Collection<Category> moderatorGroups;
 
     @JoinTable(name="endpoint_group_admin", joinColumns = @JoinColumn(name = "endpoint_id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
     @ManyToMany
-    public Collection<Group> administratorGroups;
+    public Collection<Category> administratorGroups;
 }

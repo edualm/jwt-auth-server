@@ -61,7 +61,7 @@ public class UserData extends Model {
     public List<UserAttribute> attributes;
 
     @ManyToMany(mappedBy = "users")
-    public List<Group> groups;
+    public List<Category> categories;
 
     public UserData(String username, String password, String emailAddress) {
         this.username = username;

@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 @Entity
-public class Group extends Model {
+public class Category extends Model {
     private class UserAlreadyExistsException extends Exception {}
     private class UserNotFoundException extends Exception {}
 
@@ -23,8 +23,8 @@ public class Group extends Model {
     }
 
     @Id
-    @SequenceGenerator(name = "group_id_seq", sequenceName = "group_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "group_id_seq")
+    @SequenceGenerator(name = "category_id_seq", sequenceName = "category_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_seq")
     @Column(unique = true)
     public Integer id;
 
@@ -37,12 +37,12 @@ public class Group extends Model {
     public Type type;
 
     @ManyToMany
-    @JoinTable(name="group_user",
-            joinColumns = @JoinColumn(name = "group_id", referencedColumnName = "id"),
+    @JoinTable(name="category_user",
+            joinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
     public List<UserData> users;
 
-    public Group(String name, Type type) {
+    public Category(String name, Type type) {
         this.name = name;
         this.type = type;
 
