@@ -10,6 +10,7 @@ import java.util.Collection;
  * Created by MegaEduX on 22/10/15.
  */
 
+@Entity
 public class Endpoint extends Model {
     @Id
     @SequenceGenerator(name = "endpoint_id_seq", sequenceName = "endpoint_id_seq", allocationSize = 1)

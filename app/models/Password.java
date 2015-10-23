@@ -17,6 +17,7 @@ import java.util.Arrays;
  * Created by MegaEduX on 20/10/15.
  */
 
+// /!\  NOT an Entity!
 public class Password {
     private static int kIterationCount = 1024;
 

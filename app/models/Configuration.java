@@ -12,6 +12,7 @@ import java.util.List;
  * Created by MegaEduX on 22/10/15.
  */
 
+@Entity
 public class Configuration extends Model {
     @Id
     @SequenceGenerator(name = "configuration_id_seq", sequenceName = "configuration_id_seq", allocationSize = 1)

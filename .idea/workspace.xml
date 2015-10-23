@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Authenticate.java" afterPath="$PROJECT_DIR$/app/controllers/Authenticate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Configuration.java" afterPath="$PROJECT_DIR$/app/models/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Endpoint.java" afterPath="$PROJECT_DIR$/app/models/Endpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Password.java" afterPath="$PROJECT_DIR$/app/models/Password.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -70,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/Category.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,10 +80,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Authenticate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Endpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Endpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authenticate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Authenticate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8946629">
+            <state vertical-scroll-proportion="0.0">
               <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,20 +128,10 @@
         <entry file="file://$PROJECT_DIR$/app/models/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/evolutions/default/4.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Password.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Password.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Password.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.16853933">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -197,23 +199,23 @@
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/controllers/UserManagement.java" />
         <option value="$PROJECT_DIR$/app/controllers/ManagementConsole.java" />
-        <option value="$PROJECT_DIR$/app/models/Endpoint.java" />
         <option value="$PROJECT_DIR$/app/models/UserAttribute.java" />
         <option value="$PROJECT_DIR$/conf/evolutions/default/3.sql" />
         <option value="$PROJECT_DIR$/app/utilities/JWTFactory.java" />
         <option value="$PROJECT_DIR$/conf/evolutions/default/4.sql" />
-        <option value="$PROJECT_DIR$/app/models/Configuration.java" />
         <option value="$PROJECT_DIR$/app/utilities/AutoConf.java" />
         <option value="$PROJECT_DIR$/app/utilities/Config.java" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/app/models/Password.java" />
         <option value="$PROJECT_DIR$/app/controllers/Signup.java" />
         <option value="$PROJECT_DIR$/app/models/Group.java" />
         <option value="$PROJECT_DIR$/conf/evolutions/default/5.sql" />
         <option value="$PROJECT_DIR$/app/models/Category.java" />
         <option value="$PROJECT_DIR$/app/models/UserData.java" />
         <option value="$PROJECT_DIR$/app/controllers/Authenticate.java" />
+        <option value="$PROJECT_DIR$/app/models/Configuration.java" />
+        <option value="$PROJECT_DIR$/app/models/Endpoint.java" />
+        <option value="$PROJECT_DIR$/app/models/Password.java" />
       </list>
     </option>
   </component>
@@ -824,13 +826,7 @@
       <workItem from="1445438851221" duration="3656000" />
       <workItem from="1445503789929" duration="6479000" />
       <workItem from="1445531443956" duration="8420000" />
-      <workItem from="1445593323897" duration="4687000" />
-    </task>
-    <task id="LOCAL-00009" summary="Some minor refactoring.">
-      <created>1445339944536</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1445339944536</updated>
+      <workItem from="1445593323897" duration="4991000" />
     </task>
     <task id="LOCAL-00010" summary="This is a hoare.">
       <created>1445340083145</created>
@@ -1120,11 +1116,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445599998902</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Testing...">
+      <created>1445600325594</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1445600325594</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58994000" />
+    <option name="totallyTimeSpent" value="59298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -1173,7 +1175,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ugh. ^2" />
     <MESSAGE value="Ugh. ^3" />
     <MESSAGE value="Forgot the @Entity..." />
     <MESSAGE value="Added login debug." />
@@ -1198,7 +1199,8 @@
     <MESSAGE value="Fixed (?) annotations." />
     <MESSAGE value="Huh." />
     <MESSAGE value="O RLY" />
-    <option name="LAST_COMMIT_MESSAGE" value="O RLY" />
+    <MESSAGE value="Testing..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1537,14 +1539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Endpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/evolutions/default/4.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1577,6 +1571,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conf/evolutions/default/5.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Authenticate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utilities/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Endpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/UserData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1597,57 +1647,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Password.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16853933">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/evolutions/default/5.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utilities/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Authenticate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8946629">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
