@@ -1,0 +1,5 @@
+{
+  "name": "JWT Authentication Server",
+  "description": "A fully-featured authentication server that spits out JSON Web Tokens!",
+  "repository": "https://github.com/MegaEduX/json-auth-server"
+}
