@@ -54,6 +54,10 @@ public class Authenticate extends Controller {
     }
 
     public Result getJWTPublicKey() {
-        return ok(new BASE64Encoder().encode(Config.getJsonWebKey().getPublicKey().getEncoded()));
+        String pubKey = new BASE64Encoder().encode(Config.getJsonWebKey().getPublicKey().getEncoded());
+
+        System.out.println("Public Key: " + pubKey);
+
+        return ok(pubKey);
     }
 }
