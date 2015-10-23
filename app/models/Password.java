@@ -1,17 +1,12 @@
 package models;
 
-import com.avaje.ebean.Model;
-import play.data.validation.Constraints;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
-import javax.persistence.*;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
+import java.util.Base64;
 
 /**
  * Created by MegaEduX on 20/10/15.
@@ -71,14 +66,10 @@ public class Password {
     }
 
     private byte[] base64ToByte(String data) throws IOException {
-        BASE64Decoder decoder = new BASE64Decoder();
-
-        return decoder.decodeBuffer(data);
+        return Base64.getDecoder().decode(data);
     }
 
     private String byteToBase64(byte[] data){
-        BASE64Encoder encoder = new BASE64Encoder();
-
-        return encoder.encode(data);
+        return Base64.getEncoder().encodeToString(data);
     }
 }

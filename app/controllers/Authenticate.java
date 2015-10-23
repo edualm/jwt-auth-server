@@ -1,15 +1,18 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+
 import models.Password;
 import models.UserData;
+
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
-import sun.misc.BASE64Encoder;
+
 import utilities.Config;
 import utilities.JWTFactory;
 
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -33,7 +36,7 @@ public class Authenticate extends Controller {
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0)
-            return notFound("User not found!");
+            return notFound(("{\"error\": \"User not found.\"}");
 
         UserData u = users.get(0);
 
@@ -54,9 +57,7 @@ public class Authenticate extends Controller {
     }
 
     public Result getJWTPublicKey() {
-        String pubKey = new BASE64Encoder().encode(Config.getJsonWebKey().getPublicKey().getEncoded());
-
-        System.out.println("Public Key: " + pubKey);
+        String pubKey = Base64.getEncoder().encodeToString(Config.getJsonWebKey().getPublicKey().getEncoded());
 
         return ok(pubKey);
     }

@@ -7,14 +7,12 @@ import org.jose4j.jwk.RsaJsonWebKey;
 import org.jose4j.keys.RsaKeyUtil;
 import org.jose4j.lang.JoseException;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
 import java.io.IOException;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
 
 /**
  * Created by MegaEduX on 20/10/15.
@@ -56,10 +54,8 @@ public class Config {
     static private void generateJWTKeyPair() throws JoseException {
         KeyPair kp = (new RsaKeyUtil()).generateKeyPair(2048);
 
-        BASE64Encoder encoder = new BASE64Encoder();
-
-        String pub = encoder.encode(kp.getPublic().getEncoded());
-        String pri = encoder.encode(kp.getPrivate().getEncoded());
+        String pub = Base64.getEncoder().encodeToString(kp.getPublic().getEncoded());
+        String pri = Base64.getEncoder().encodeToString(kp.getPrivate().getEncoded());
 
         Configuration pubKey = new Configuration(kPublicKey, pub);
         Configuration priKey = new Configuration(kPrivateKey, pri);
@@ -74,16 +70,14 @@ public class Config {
             InvalidKeySpecException, JoseException, NoSavedKeyPairException {
         KeyFactory kf = KeyFactory.getInstance("RSA");
 
-        BASE64Decoder decoder = new BASE64Decoder();
-
         Configuration pubKey = Configuration.getConfiguration(kPublicKey);
         Configuration priKey = Configuration.getConfiguration(kPrivateKey);
 
         if (pubKey == null || priKey == null)
             throw new Config.NoSavedKeyPairException();
 
-        PublicKey pubRecovered = kf.generatePublic(new X509EncodedKeySpec(decoder.decodeBuffer(pubKey.value)));
-        PrivateKey priRecovered = kf.generatePrivate(new PKCS8EncodedKeySpec(decoder.decodeBuffer(priKey.value)));
+        PublicKey pubRecovered = kf.generatePublic(new X509EncodedKeySpec(Base64.getDecoder().decode(pubKey.value)));
+        PrivateKey priRecovered = kf.generatePrivate(new PKCS8EncodedKeySpec(Base64.getDecoder().decode(priKey.value)));
 
         Config.setJsonWebKey(createKey(pubRecovered, priRecovered));
     }
