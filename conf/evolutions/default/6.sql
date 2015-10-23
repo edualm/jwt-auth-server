@@ -2,8 +2,8 @@
 
 # --- !Ups
 
-ALTER TABLE user_data DROP COLUMN username
+ALTER TABLE user_attribute DROP COLUMN username
 
 # --- !Downs
 
-ALTER TABLE user_data ADD COLUMN username VARCHAR(64) UNIQUE NOT NULL;
+ALTER TABLE user_attribute ADD COLUMN username VARCHAR(64) UNIQUE NOT NULL;
