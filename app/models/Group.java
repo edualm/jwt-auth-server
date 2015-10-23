@@ -36,8 +36,10 @@ public class Group extends Model {
     @Enumerated(EnumType.STRING)
     public Type type;
 
-    @JoinTable(name="group_user", joinColumns = @JoinColumn(name = "group_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     @ManyToMany
+    @JoinTable(name="group_user",
+            joinColumns = @JoinColumn(name = "group_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
     public List<UserData> users;
 
     public Group(String name, Type type) {
