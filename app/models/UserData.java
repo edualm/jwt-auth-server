@@ -60,7 +60,7 @@ public class UserData extends Model {
     @OneToMany(mappedBy = "user")
     public List<UserAttribute> attributes;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "user_id")
     public List<Group> groups;
 
     public UserData(String username, String password, String emailAddress) {

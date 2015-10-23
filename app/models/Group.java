@@ -5,7 +5,7 @@ import play.data.validation.Constraints;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by MegaEduX on 22/10/15.
@@ -38,7 +38,7 @@ public class Group extends Model {
 
     @JoinTable(name="group_user", joinColumns = @JoinColumn(name = "group_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
     @ManyToMany
-    public Collection<UserData> users;
+    public List<UserData> users;
 
     public Group(String name, Type type) {
         this.name = name;
