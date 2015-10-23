@@ -39,8 +39,7 @@ CREATE TABLE category_user (
   id  SERIAL,
   category_id INT REFERENCES category(id) NOT NULL,
   user_id INT REFERENCES user_data(id) NOT NULL,
-  CONSTRAINT category_user_pkey PRIMARY KEY (category_id, user_id),
-  PRIMARY KEY (id)
+  CONSTRAINT category_user_pkey PRIMARY KEY (category_id, user_id)
 );
 
 # --- !Downs

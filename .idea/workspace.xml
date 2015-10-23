@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="Another table fix. Kinda hacky, though. Don't repeat!">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/evolutions/default/2.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/evolutions/default/3.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/evolutions/default/4.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/evolutions/default/5.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/evolutions/default/6.sql" afterPath="" />
+    <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/evolutions/default/1.sql" afterPath="$PROJECT_DIR$/conf/evolutions/default/1.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -98,8 +93,8 @@
       <file leaf-file-name="1.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/evolutions/default/1.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16853933">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.86376405">
+              <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -776,13 +771,7 @@
       <workItem from="1445438851221" duration="3656000" />
       <workItem from="1445503789929" duration="6479000" />
       <workItem from="1445531443956" duration="8420000" />
-      <workItem from="1445593323897" duration="9618000" />
-    </task>
-    <task id="LOCAL-00017" summary="Added some debug code. ^7">
-      <created>1445342790411</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1445342790411</updated>
+      <workItem from="1445593323897" duration="9788000" />
     </task>
     <task id="LOCAL-00018" summary="Added some debug code. ^8">
       <created>1445343115544</created>
@@ -1072,11 +1061,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445630332341</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Merged all evolutions, fixed up db.">
+      <created>1445631218885</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1445631218885</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63925000" />
+    <option name="totallyTimeSpent" value="64095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -1125,7 +1120,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated JWT debug." />
     <MESSAGE value="Added (basic) JWT response." />
     <MESSAGE value="Fixed login JSON." />
     <MESSAGE value="Added &quot;Attribute&quot; on User (allows for groups, permissions, etc etc)." />
@@ -1150,7 +1144,8 @@
     <MESSAGE value="Added test data call." />
     <MESSAGE value="Fixed User Attributes table." />
     <MESSAGE value="Fixed User Attributes table. Now, for real. :P" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed User Attributes table. Now, for real. :P" />
+    <MESSAGE value="Merged all evolutions, fixed up db." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged all evolutions, fixed up db." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1563,8 +1558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/evolutions/default/1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16853933">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.86376405">
+          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
           <folding />
         </state>
       </provider>
