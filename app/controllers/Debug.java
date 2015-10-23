@@ -34,6 +34,9 @@ public class Debug extends Controller {
             UserData u = new UserData("foo", "bar", "foo@bar.com");
             Category cat = new Category("Admin Category", Category.Type.Administrator);
 
+            u.save();
+            cat.save();
+
             u.addAttribute("fus, ro...", "DAH!");
             u.categories.add(cat);
 
@@ -42,9 +45,9 @@ public class Debug extends Controller {
             u.save();
             cat.save();
 
-            return ok("{\"success\": \"true\"}");
+            return ok("{\"success\": true}");
         } catch (Exception e) {
-            return ok("{\"success\": \"false\", \"debug\": \"" + e + "\"}");
+            return ok("{\"success\": false, \"debug\": \"" + e + "\"}");
         }
 
     }
