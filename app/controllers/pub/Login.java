@@ -2,6 +2,7 @@ package controllers.pub;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import utilities.Config;
 import views.html.login;
 
 /**
@@ -11,7 +12,7 @@ import views.html.login;
 public class Login extends Controller {
 
     public Result loginPage() {
-        return ok(login.render());
+        return ok(login.render(Config.ServerName));
     }
 
 }
