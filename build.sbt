@@ -14,7 +14,6 @@ libraryDependencies ++= Seq(
   "org.postgresql" % "postgresql" % "9.3-1102-jdbc4",
   "org.webjars" %% "webjars-play" % "2.4.0-1",
   "org.webjars" % "bootstrap" % "3.3.5",
-  "org.webjars" % "bootswatch-yeti" % "3.3.5",
   "org.webjars" % "html5shiv" % "3.7.0",
   "org.webjars" % "respond" % "1.4.2"
 )

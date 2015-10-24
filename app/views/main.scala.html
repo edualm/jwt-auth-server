@@ -9,7 +9,7 @@
             <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>@title</title>
             <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" media="screen" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootswatch-yeti", "bootstrap.min.css"))">
+        <link rel="stylesheet" media="screen" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap", "bootstrap.min.css"))">
         <!--[if lt IE 9]>
             <script src="@routes.WebJarAssets.at(WebJarAssets.locate("html5shiv.js"))"></script>
             <script src="@routes.WebJarAssets.at(WebJarAssets.locate("respond.min.js"))"></script>
@@ -57,10 +57,10 @@
         </nav>
 
         <div class="container">
-        @content
+            @content
         </div>
 
         <script src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
-        <script src="@routes.WebJarAssets.at(WebJarAssets.locate("bootswatch-yeti", "bootstrap.min.js"))"></script>
+        <script src="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap", "bootstrap.min.js"))"></script>
     </body>
 </html>
