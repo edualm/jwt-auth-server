@@ -166,5 +166,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="SBT: org.webjars:bootswatch-yeti:3.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:html5shiv:3.7.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:respond:1.4.2:jar" level="project" />
   </component>
 </module>
