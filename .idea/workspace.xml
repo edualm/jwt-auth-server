@@ -113,8 +113,8 @@
       <file leaf-file-name="routes" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22292994">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5732484">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -854,13 +854,7 @@
       <workItem from="1445701048403" duration="5000" />
       <workItem from="1445701055888" duration="3000" />
       <workItem from="1445701106199" duration="23000" />
-      <workItem from="1445709454549" duration="755000" />
-    </task>
-    <task id="LOCAL-00022" summary="Try #2 of AIAD...">
-      <created>1445346482079</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1445346482079</updated>
+      <workItem from="1445709454549" duration="1222000" />
     </task>
     <task id="LOCAL-00023" summary="Try #3 of AIAD...">
       <created>1445346693409</created>
@@ -1150,11 +1144,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445709991263</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Fixed routes.">
+      <created>1445710221199</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1445710221199</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66822000" />
+    <option name="totallyTimeSpent" value="67289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="6" />
@@ -1203,7 +1203,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added change password." />
     <MESSAGE value="Fixed Long to Int cast." />
     <MESSAGE value="Wrong key?" />
     <MESSAGE value="Lots of work on groups. The SQL is missing!" />
@@ -1228,7 +1227,8 @@
     <MESSAGE value="I really have no idea." />
     <MESSAGE value="Dumbifying a debug call..." />
     <MESSAGE value="Implemented Bootstrap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Bootstrap." />
+    <MESSAGE value="Fixed routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed routes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1620,6 +1620,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pub/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1632,20 +1642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22292994">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.5732484">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
           <folding />
         </state>
       </provider>
