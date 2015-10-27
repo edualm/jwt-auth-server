@@ -1,4 +1,4 @@
-package controllers;
+package controllers.api;
 
 import com.avaje.ebean.Ebean;
 import models.UserData;
@@ -17,7 +17,7 @@ import java.util.List;
  * Created by MegaEduX on 22/10/15.
  */
 
-public class UserManagement extends Controller {
+public class ManageUser extends Controller {
     public Result changePassword() {
         DynamicForm form = Form.form().bindFromRequest();
 

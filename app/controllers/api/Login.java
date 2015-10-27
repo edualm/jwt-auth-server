@@ -1,4 +1,4 @@
-package controllers;
+package controllers.api;
 
 import com.avaje.ebean.Ebean;
 
@@ -19,7 +19,7 @@ import java.util.List;
  * Created by MegaEduX on 19/10/15.
  */
 
-public class Authenticate extends Controller {
+public class Login extends Controller {
 
     public Result login() {
         DynamicForm form = Form.form().bindFromRequest();
@@ -54,11 +54,5 @@ public class Authenticate extends Controller {
         } catch (Exception e) {
             return internalServerError(e.getMessage());
         }
-    }
-
-    public Result getJWTPublicKey() {
-        String pubKey = Base64.getEncoder().encodeToString(Config.getJsonWebKey().getPublicKey().getEncoded());
-
-        return ok(pubKey);
     }
 }

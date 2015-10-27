@@ -1,4 +1,4 @@
-package controllers;
+package controllers.api;
 
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.annotation.Transactional;
@@ -11,7 +11,7 @@ import play.data.*;
  * Created by MegaEduX on 19/10/15.
  */
 
-public class Signup extends Controller {
+public class Register extends Controller {
 
     @Transactional
     public Result signup() {

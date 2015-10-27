@@ -4,22 +4,21 @@
 
 GET     /                           controllers.pub.Application.index()
 
-POST    /register                   controllers.Signup.signup()
-POST    /login                      controllers.Authenticate.login()
-
-GET     /rsa/pub/base64             controllers.Authenticate.getJWTPublicKey()
+POST    /api/register               controllers.api.Register.signup()
+POST    /api/login                  controllers.api.Login.login()
+POST    /api/user/changePassword    controllers.api.ManageUser.changePassword()
 
 GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
 GET     /debug/createJWT            controllers.Debug.createJWT()
 GET     /debug/populate             controllers.Debug.populateWithTestData()
-
-POST    /user/changePassword        controllers.UserManagement.changePassword()
 
 POST    /public/login/perform       controllers.pub.LoginPerform.handlePerformLogin()
 POST    /public/register/perform    controllers.pub.RegisterPerform.handleRegisterPerform()
 
 GET     /public/login               controllers.pub.Login.loginPage()
 GET     /public/register            controllers.pub.Register.registerPage()
+
+GET     /public/rsa/base64          controllers.api.Login.getJWTPublicKey()
 
 GET     /assets/*file               controllers.Assets.versioned(path = "/public", file: Asset)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)

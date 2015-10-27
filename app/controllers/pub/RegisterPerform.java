@@ -39,7 +39,7 @@ public class RegisterPerform extends Controller {
             return ok(register_failure.render(Config.ServerName, "Missing file: \"name\"."));
 
         if (Ebean.find(UserData.class).where().eq("username", user).findList().size() != 0)
-            return notFound("{\"error\": \"A user with this username or e-mail already exists!\"}");
+            return ok(register_failure.render(Config.ServerName, "A user with this username or e-mail already exists!"));
 
         UserData u = new UserData(user, pass, email);
 
