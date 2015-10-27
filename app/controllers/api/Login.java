@@ -55,4 +55,10 @@ public class Login extends Controller {
             return internalServerError(e.getMessage());
         }
     }
+
+    public Result getJWTPublicKey() {
+        String pubKey = Base64.getEncoder().encodeToString(Config.getJsonWebKey().getPublicKey().getEncoded());
+
+        return ok(pubKey);
+    }
 }
