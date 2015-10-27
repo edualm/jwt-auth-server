@@ -16,6 +16,7 @@ GET     /debug/populate             controllers.Debug.populateWithTestData()
 
 POST    /user/changePassword        controllers.UserManagement.changePassword()
 
+POST    /public/login/result        controllers.pub.LoginPerform.handlePerformLogin()
 GET     /public/login               controllers.pub.Login.loginPage()
 
 # Map static resources from the /public folder to the /assets URL path
