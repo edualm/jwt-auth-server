@@ -1,4 +1,4 @@
-package controllers.pub;
+package controllers.pub.unauthenticated;
 
 import com.avaje.ebean.Ebean;
 import models.Password;
@@ -9,16 +9,21 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.Config;
 import utilities.JWTFactory;
+import views.html.login;
 import views.html.login_failure;
 import views.html.login_success;
 
 import java.util.List;
 
 /**
- * Created by MegaEduX on 27/10/15.
+ * Created by MegaEduX on 23/10/15.
  */
 
-public class LoginPerform extends Controller {
+public class Login extends Controller {
+
+    public Result loginPage() {
+        return ok(login.render(Config.ServerName));
+    }
 
     public Result handlePerformLogin() {
         DynamicForm form = Form.form().bindFromRequest();

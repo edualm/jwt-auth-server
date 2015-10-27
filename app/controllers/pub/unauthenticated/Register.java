@@ -1,23 +1,25 @@
-package controllers.pub;
+package controllers.pub.unauthenticated;
 
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.annotation.Transactional;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.Config;
+import views.html.register;
 import views.html.register_failure;
 import views.html.register_success;
 
 /**
- * Created by MegaEduX on 27/10/15.
+ * Created by MegaEduX on 23/10/15.
  */
 
-public class RegisterPerform extends Controller {
+public class Register extends Controller {
+    public Result registerPage() {
+        return ok(register.render(Config.ServerName));
+    }
 
-    @Transactional
     public Result handleRegisterPerform() {
         DynamicForm form = Form.form().bindFromRequest();
 
@@ -49,5 +51,4 @@ public class RegisterPerform extends Controller {
 
         return ok(register_success.render(Config.ServerName));
     }
-
 }
