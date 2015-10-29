@@ -23,6 +23,11 @@ public class Config {
     private static final String kPublicKey = "jwt-publicKey";
     private static final String kPrivateKey = "jwt-privateKey";
 
+    public static final String kSendGridUsername = "ldso-az-auth";
+    public static final String kSendGridPassword = "iXdGD9zTgMQbq3";
+
+    public static final String kEmailFrom = "noreply@labcd.org";
+
     private static RsaJsonWebKey jsonWebKey = null;
 
     static public final String ServerName = "jwt-auth-server";

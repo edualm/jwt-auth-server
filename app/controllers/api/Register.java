@@ -2,10 +2,13 @@ package controllers.api;
 
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.annotation.Transactional;
+import com.sendgrid.SendGrid;
 import models.*;
 
 import play.mvc.*;
 import play.data.*;
+import utilities.Config;
+import utilities.KeyGenerator;
 
 /**
  * Created by MegaEduX on 19/10/15.
@@ -37,7 +40,34 @@ public class Register extends Controller {
 
         u.save();
 
+        KeyGenerator kg = new KeyGenerator();
+
+        UserAttribute val = new UserAttribute(u, "validation-key", kg.nextKey());
+
+        val.save();
+
         return ok("{\"result\": \"success\"}");
+    }
+
+    public boolean sendEmail(String email) {
+        SendGrid sg = new SendGrid(Config.kSendGridUsername, Config.kSendGridPassword);
+
+        SendGrid.Email e = new SendGrid.Email();
+
+        e.addTo(email);
+        e.setFrom(Config.kEmailFrom);
+        e.setSubject("Registration");
+        e.setText("<~ validation text ~>");
+
+        try {
+            SendGrid.Response r = sg.send(e);
+
+            return true;
+        } catch (Exception ex) {
+            System.err.println(ex);
+
+            return false;
+        }
     }
 
 }
