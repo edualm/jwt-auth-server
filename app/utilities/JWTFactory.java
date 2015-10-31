@@ -16,7 +16,7 @@ import java.util.List;
  * Created by MegaEduX on 20/10/15.
  */
 public class JWTFactory {
-    public static String createJWT() throws JoseException {
+    public static String createDemoJWT() throws JoseException {
         //
         // JSON Web Token is a compact URL-safe means of representing claims/attributes to be transferred between two parties.
         // This example demonstrates producing and consuming a signed JWT

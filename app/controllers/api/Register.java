@@ -9,6 +9,7 @@ import play.mvc.*;
 import play.data.*;
 import utilities.Config;
 import utilities.KeyGenerator;
+import utilities.Mailer;
 
 /**
  * Created by MegaEduX on 19/10/15.
@@ -23,6 +24,8 @@ public class Register extends Controller {
         String user = form.get("username");
         String pass = form.get("password");
         String email = form.get("email");
+        String firstName = form.get("firstName");
+        String lastName = form.get("lastName");
 
         if (user == null || user == "")
             return notFound("{\"error\": \"Missing field: \"username\".\"}");
@@ -33,10 +36,16 @@ public class Register extends Controller {
         if (email == null || email == "")
             return notFound("{\"error\": \"Missing field: \"email\".\"}");
 
+        if (firstName == null || firstName == "")
+            return notFound("{\"error\": \"Missing field: \"firstName\".\"}");
+
+        if (lastName == null || lastName == "")
+            return notFound("{\"error\": \"Missing field: \"lastName\".\"}");
+
         if (Ebean.find(UserData.class).where().eq("username", user).findList().size() != 0)
             return notFound("{\"error\": \"A user with this username or e-mail already exists!\"}");
 
-        UserData u = new UserData(user, pass, email);
+        UserData u = new UserData(user, pass, email, firstName, lastName);
 
         u.save();
 
@@ -46,34 +55,13 @@ public class Register extends Controller {
 
         val.save();
 
-        if (sendEmail(user, email, val.value))
+        if (Mailer.sendValidationEmail(user, email, val.value))
             return ok("{\"result\": \"success\"}");
         else
             return internalServerError("{\"result\": \"ko\"}");
 
     }
 
-    public boolean sendEmail(String username, String email, String validationKey) {
-        SendGrid sg = new SendGrid(Config.kSendGridUsername, Config.kSendGridPassword);
 
-        SendGrid.Email e = new SendGrid.Email();
-
-        e.addTo(email);
-        e.setFrom(Config.kEmailFrom);
-        e.setSubject("Validate your registration on " + Config.ServerName);
-        e.setText("Hello,\n\nThanks for your registration!\n\nPlease validate your account at " +
-                Config.ServerURL + "/pub/validate/?username=" + username + "&validationKey=" +
-                validationKey +"\n\nThanks,\n" + Config.ServerName);
-
-        try {
-            SendGrid.Response r = sg.send(e);
-
-            return true;
-        } catch (Exception ex) {
-            System.err.println(ex);
-
-            return false;
-        }
-    }
 
 }

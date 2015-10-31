@@ -5,7 +5,6 @@ import models.Category;
 import models.UserAttribute;
 import models.UserData;
 import org.jose4j.lang.JoseException;
-import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.JWTFactory;
@@ -32,7 +31,7 @@ public class Debug extends Controller {
 
     public Result createJWT() {
         try {
-            return ok(JWTFactory.createJWT());
+            return ok(JWTFactory.createDemoJWT());
         } catch (JoseException e) {
             return internalServerError(e.getMessage());
         }
@@ -40,7 +39,7 @@ public class Debug extends Controller {
 
     public Result populateWithTestData() {
         try {
-            UserData u = new UserData("foo", "bar", "foo@bar.com");
+            UserData u = new UserData("foo", "bar", "foo@bar.com", "Baz", "Kek");
             Category cat = new Category("Admin Category", Category.Type.Administrator);
 
             u.save();

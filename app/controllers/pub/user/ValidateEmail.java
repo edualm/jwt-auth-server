@@ -31,6 +31,7 @@ public class ValidateEmail extends Controller {
                 if (ua.value.equals(key)) {
                     try {
                         u.removeAttribute("validation-key");
+                        u.save();
                     } catch (UserData.AttributeNotFoundException e) {
                         //  This can't happen.
                     }

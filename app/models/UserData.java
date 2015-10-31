@@ -43,6 +43,12 @@ public class UserData extends Model {
     public String username;
 
     @Constraints.Required
+    public String firstName;
+
+    @Constraints.Required
+    public String lastName;
+
+    @Constraints.Required
     public String passwordDigest;
 
     @Constraints.Required
@@ -64,7 +70,7 @@ public class UserData extends Model {
     @ManyToMany(mappedBy = "users")
     public List<Category> categories;
 
-    public UserData(String username, String password, String emailAddress) {
+    public UserData(String username, String password, String emailAddress, String firstName, String lastName) {
         this.username = username;
         this.emailAddress = emailAddress;
 
@@ -76,6 +82,9 @@ public class UserData extends Model {
         } catch (Exception e) {
 
         }
+
+        this.firstName = firstName;
+        this.lastName = lastName;
 
         this.enabled = true;
         this.signupTime = new Timestamp((new Date()).getTime());
