@@ -18,6 +18,8 @@ POST    /public/register/perform    controllers.pub.unauthenticated.Register.han
 GET     /public/login               controllers.pub.unauthenticated.Login.loginPage()
 GET     /public/register            controllers.pub.unauthenticated.Register.registerPage()
 
+GET     /public/validate            controllers.pub.user.ValidateEmail.handleValidation()
+
 GET     /public/rsa/base64          controllers.api.Login.getJWTPublicKey()
 
 GET     /assets/*file               controllers.Assets.versioned(path = "/public", file: Asset)

@@ -6,6 +6,7 @@ import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 import utilities.Config;
 
+import javax.annotation.Nullable;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -113,5 +114,15 @@ public class UserData extends Model {
         } catch (Exception e) {
 
         }
+    }
+
+    @Nullable
+    public static UserData getUserDataFromUsername(String username) {
+        List<UserData> results = Ebean.find(UserData.class).where().eq("username", username).findList();
+
+        if (results.size() != 0)
+            return results.get(0);
+
+        return null;
     }
 }

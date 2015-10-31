@@ -49,16 +49,18 @@ public class Register extends Controller {
         return ok("{\"result\": \"success\"}");
     }
 
-    public boolean sendEmail(String email) {
+    public boolean sendEmail(String username, String email, String validationKey) {
         SendGrid sg = new SendGrid(Config.kSendGridUsername, Config.kSendGridPassword);
 
         SendGrid.Email e = new SendGrid.Email();
 
         e.addTo(email);
         e.setFrom(Config.kEmailFrom);
-        e.setSubject("Registration");
-        e.setText("<~ validation text ~>");
-
+        e.setSubject("Validate your registration on " + Config.ServerName);
+        e.setText("Hello,\n\nThanks for your registration!\n\nPlease validate your account at " +
+                Config.ServerURL + "/pub/validate/?username=" + username + "&validationKey=" +
+                validationKey +"\n\nThanks,\n" + Config.ServerName);
+        
         try {
             SendGrid.Response r = sg.send(e);
 
