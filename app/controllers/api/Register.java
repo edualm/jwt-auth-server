@@ -46,7 +46,11 @@ public class Register extends Controller {
 
         val.save();
 
-        return ok("{\"result\": \"success\"}");
+        if (sendEmail(user, email, val.value))
+            return ok("{\"result\": \"success\"}");
+        else
+            return internalServerError("{\"result\": \"ko\"}");
+
     }
 
     public boolean sendEmail(String username, String email, String validationKey) {
@@ -60,7 +64,7 @@ public class Register extends Controller {
         e.setText("Hello,\n\nThanks for your registration!\n\nPlease validate your account at " +
                 Config.ServerURL + "/pub/validate/?username=" + username + "&validationKey=" +
                 validationKey +"\n\nThanks,\n" + Config.ServerName);
-        
+
         try {
             SendGrid.Response r = sg.send(e);
 
