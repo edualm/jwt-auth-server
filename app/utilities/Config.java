@@ -30,7 +30,7 @@ public class Config {
 
     private static RsaJsonWebKey jsonWebKey = null;
 
-    static public final String ServerName = "jwt-auth-server";
+    static public final String ServerName = "Audiência Zero SSO";
     static public final String ServerURL = "https://audiencia-zero-auth.herokuapp.com/";
     static public final Integer MinimumPasswordLength = 8;
 

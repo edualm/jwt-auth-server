@@ -56,8 +56,19 @@ public class Login extends Controller {
             if (pi.validate(pass)) {
                 if (callback != "")
                     return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false)));
-                else
+                else {
+                    response().setCookie(
+                            "jwt",
+                            JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", true),
+                            3600,
+                            "/",
+                            Config.ServerURL,
+                            true,
+                            true
+                    );
+
                     return ok(login_success.render(Config.ServerName, ""));
+                }
             } else {
                 return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
             }
