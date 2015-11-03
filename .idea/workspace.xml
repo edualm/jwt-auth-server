@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.scala.html" afterPath="$PROJECT_DIR$/app/views/index.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.scala.html" afterPath="$PROJECT_DIR$/app/views/login.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login_failure.scala.html" afterPath="$PROJECT_DIR$/app/views/login_failure.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login_success.scala.html" afterPath="$PROJECT_DIR$/app/views/login_success.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register.scala.html" afterPath="$PROJECT_DIR$/app/views/register.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register_failure.scala.html" afterPath="$PROJECT_DIR$/app/views/register_failure.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register_success.scala.html" afterPath="$PROJECT_DIR$/app/views/register_success.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/validate_failure.scala.html" afterPath="$PROJECT_DIR$/app/views/validate_failure.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/validate_success.scala.html" afterPath="$PROJECT_DIR$/app/views/validate_success.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -127,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_success.scala.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register_success.scala.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/register_success.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25">
+            <state vertical-scroll-proportion="0.06666667">
               <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
@@ -157,10 +146,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validate_success.scala.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="validate_success.scala.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/validate_success.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
+            <state vertical-scroll-proportion="-7.5">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
@@ -170,8 +159,8 @@
       <file leaf-file-name="main.scala.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.125">
-              <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -247,7 +236,6 @@
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/views/register.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/app/views/login_success.scala.html" />
         <option value="$PROJECT_DIR$/app/views/login_failure.scala.html" />
         <option value="$PROJECT_DIR$/app/views/login.scala.html" />
@@ -256,6 +244,7 @@
         <option value="$PROJECT_DIR$/app/views/register_success.scala.html" />
         <option value="$PROJECT_DIR$/app/views/validate_failure.scala.html" />
         <option value="$PROJECT_DIR$/app/views/validate_success.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
       </list>
     </option>
   </component>
@@ -983,13 +972,7 @@
       <workItem from="1446124248827" duration="22000" />
       <workItem from="1446124710230" duration="378000" />
       <workItem from="1446309169305" duration="7536000" />
-      <workItem from="1446548476356" duration="683000" />
-    </task>
-    <task id="LOCAL-00043" summary="Added (basic) JWT response.">
-      <created>1445370762486</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1445370762486</updated>
+      <workItem from="1446548476356" duration="832000" />
     </task>
     <task id="LOCAL-00044" summary="Fixed login JSON.">
       <created>1445371018517</created>
@@ -1279,11 +1262,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446322781451</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Honestly I doubt these templates will even compile.">
+      <created>1446549176130</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1446549176131</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96296000" />
+    <option name="totallyTimeSpent" value="96445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="835" extended-state="6" />
@@ -1332,7 +1321,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="I don't know SQL anymore, apparently?" />
     <MESSAGE value="I really have no idea." />
     <MESSAGE value="Dumbifying a debug call..." />
     <MESSAGE value="Implemented Bootstrap." />
@@ -1357,7 +1345,8 @@
     <MESSAGE value="Any chance it works now?" />
     <MESSAGE value="Forgot to actually do the validation call." />
     <MESSAGE value="Huh." />
-    <option name="LAST_COMMIT_MESSAGE" value="Huh." />
+    <MESSAGE value="Honestly I doubt these templates will even compile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Honestly I doubt these templates will even compile." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1685,14 +1674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.125">
-          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/login_success.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375">
@@ -1733,14 +1714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/register_success.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/setup_assistant.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1759,8 +1732,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/validate_success.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
+        <state vertical-scroll-proportion="-7.5">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/register_success.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06666667">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
