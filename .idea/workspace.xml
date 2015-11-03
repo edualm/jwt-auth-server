@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.scala.html" afterPath="$PROJECT_DIR$/app/views/login.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register.scala.html" afterPath="$PROJECT_DIR$/app/views/register.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -115,8 +111,8 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.556962">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.36708862">
+              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1010,13 +1006,7 @@
       <workItem from="1446124248827" duration="22000" />
       <workItem from="1446124710230" duration="378000" />
       <workItem from="1446309169305" duration="7536000" />
-      <workItem from="1446548476356" duration="4006000" />
-    </task>
-    <task id="LOCAL-00046" summary="Added password modification, enabled/disabled check, and a few crap more.">
-      <created>1445442210047</created>
-      <option name="number" value="00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1445442210047</updated>
+      <workItem from="1446548476356" duration="5090000" />
     </task>
     <task id="LOCAL-00047" summary="Added change password.">
       <created>1445508709323</created>
@@ -1306,11 +1296,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446551998487</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="More authentication checks.">
+      <created>1446554730945</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1446554730945</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99619000" />
+    <option name="totallyTimeSpent" value="100703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="835" extended-state="6" />
@@ -1359,7 +1355,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented Bootstrap." />
     <MESSAGE value="Fixed routes." />
     <MESSAGE value="Updated routes." />
     <MESSAGE value="More bootstrap work." />
@@ -1384,7 +1379,8 @@
     <MESSAGE value="Honestly I doubt these templates will even compile." />
     <MESSAGE value="Aha, the syntax was all wrong." />
     <MESSAGE value="Access Control and Log Out implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Access Control and Log Out implemented." />
+    <MESSAGE value="More authentication checks." />
+    <option name="LAST_COMMIT_MESSAGE" value="More authentication checks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1799,8 +1795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.556962">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.36708862">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

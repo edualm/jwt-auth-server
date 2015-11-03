@@ -33,7 +33,7 @@ public class Login extends Controller {
     public Result handlePerformLogin() {
         if (AuthManager.isLoggedIn(request().cookies()))
             return forbidden(forbidden.render(Config.ServerName));
-        
+
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");
@@ -62,7 +62,7 @@ public class Login extends Controller {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
             if (pi.validate(pass)) {
-                if (callback != "")
+                if (callback != null && callback != "")
                     return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false)));
                 else {
                     response().setCookie(
