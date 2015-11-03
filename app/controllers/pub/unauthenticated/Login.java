@@ -70,7 +70,7 @@ public class Login extends Controller {
                             JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", true),
                             3600,
                             "/",
-                            Config.ServerURL,
+                            Config.ServerURI,
                             true,
                             true
                     );

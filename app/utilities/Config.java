@@ -32,6 +32,8 @@ public class Config {
 
     static public final String ServerName = "Audiência Zero SSO";
     static public final String ServerURL = "https://audiencia-zero-auth.herokuapp.com/";
+    static public final String ServerURI = "audiencia-zero-auth.herokuapp.com";
+
     static public final Integer MinimumPasswordLength = 8;
 
     static public RsaJsonWebKey getJsonWebKey() {
