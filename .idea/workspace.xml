@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utilities/Config.java" afterPath="$PROJECT_DIR$/app/utilities/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utilities/AuthManager.java" afterPath="$PROJECT_DIR$/app/utilities/AuthManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/Login.java" afterPath="$PROJECT_DIR$/app/controllers/api/Login.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/Register.java" afterPath="$PROJECT_DIR$/app/controllers/api/Register.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -109,24 +112,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_failure.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/register_failure.scala.html">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62025315">
-              <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utilities/AuthManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4113924">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,26 +174,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/login.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout_success.scala.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/logout_success.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -220,7 +223,6 @@
         <option value="$PROJECT_DIR$/app/controllers/pub/RegisterPerform.java" />
         <option value="$PROJECT_DIR$/app/controllers/Authenticate.java" />
         <option value="$PROJECT_DIR$/app/controllers/api/UserManagement.java" />
-        <option value="$PROJECT_DIR$/app/controllers/api/Login.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/RegisterPerform.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/SetupAssistant.java" />
         <option value="$PROJECT_DIR$/build.sbt" />
@@ -230,7 +232,6 @@
         <option value="$PROJECT_DIR$/app/models/Application.java" />
         <option value="$PROJECT_DIR$/conf/evolutions/default/3.sql" />
         <option value="$PROJECT_DIR$/app/models/UserData.java" />
-        <option value="$PROJECT_DIR$/app/controllers/api/Register.java" />
         <option value="$PROJECT_DIR$/app/utilities/Mailer.java" />
         <option value="$PROJECT_DIR$/app/utilities/JWTFactory.java" />
         <option value="$PROJECT_DIR$/app/controllers/Debug.java" />
@@ -245,15 +246,17 @@
         <option value="$PROJECT_DIR$/app/views/logout_success.scala.html" />
         <option value="$PROJECT_DIR$/app/utilities/JWTValidator.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/user/ValidateEmail.java" />
-        <option value="$PROJECT_DIR$/app/utilities/AuthManager.java" />
         <option value="$PROJECT_DIR$/app/views/forbidden.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
         <option value="$PROJECT_DIR$/app/views/login.scala.html" />
         <option value="$PROJECT_DIR$/app/views/register.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
         <option value="$PROJECT_DIR$/app/utilities/Config.java" />
+        <option value="$PROJECT_DIR$/app/utilities/AuthManager.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
+        <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
+        <option value="$PROJECT_DIR$/app/controllers/api/Login.java" />
+        <option value="$PROJECT_DIR$/app/controllers/api/Register.java" />
       </list>
     </option>
   </component>
@@ -1007,13 +1010,7 @@
       <workItem from="1446124248827" duration="22000" />
       <workItem from="1446124710230" duration="378000" />
       <workItem from="1446309169305" duration="7536000" />
-      <workItem from="1446548476356" duration="5399000" />
-    </task>
-    <task id="LOCAL-00048" summary="Fixed Long to Int cast.">
-      <created>1445509428025</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1445509428025</updated>
+      <workItem from="1446548476356" duration="5743000" />
     </task>
     <task id="LOCAL-00049" summary="Wrong key?">
       <created>1445510930713</created>
@@ -1303,11 +1300,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446556667498</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Let's use an URI instead...">
+      <created>1446556978772</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1446556978772</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101012000" />
+    <option name="totallyTimeSpent" value="101356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="835" extended-state="6" />
@@ -1356,7 +1359,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated routes." />
     <MESSAGE value="More bootstrap work." />
     <MESSAGE value="Now?" />
     <MESSAGE value="Added missing WebJARs..." />
@@ -1381,7 +1383,8 @@
     <MESSAGE value="Access Control and Log Out implemented." />
     <MESSAGE value="More authentication checks." />
     <MESSAGE value="Fixed login, hopefully." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed login, hopefully." />
+    <MESSAGE value="Let's use an URI instead..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Let's use an URI instead..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1549,26 +1552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Debug.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1700,14 +1687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/utilities/AuthManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forbidden.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26666668">
@@ -1784,23 +1763,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
+    <entry file="file://$PROJECT_DIR$/app/utilities/AuthManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62025315">
-          <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4113924">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -24,7 +24,7 @@ public class Login extends Controller {
     public Result login() {
         DynamicForm form = Form.form().bindFromRequest();
 
-        String user = form.get("username");
+        String user = form.get("username").toLowerCase();
         String pass = form.get("password");
 
         if (user == null || user == "")

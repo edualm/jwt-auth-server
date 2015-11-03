@@ -8,7 +8,7 @@ import play.mvc.Http;
 
 public class AuthManager {
     public static boolean isLoggedIn(Http.Cookies allCookies) {
-        Http.Cookie authCookie = allCookies.get("auth");
+        Http.Cookie authCookie = allCookies.get("jwt");
 
         if (authCookie == null)
             return false;

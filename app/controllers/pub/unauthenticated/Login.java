@@ -36,7 +36,7 @@ public class Login extends Controller {
 
         DynamicForm form = Form.form().bindFromRequest();
 
-        String user = form.get("username");
+        String user = form.get("username").toLowerCase();
         String pass = form.get("password");
         String callback = form.get("callback");
 
