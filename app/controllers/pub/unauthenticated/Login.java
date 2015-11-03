@@ -7,8 +7,10 @@ import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utilities.AuthManager;
 import utilities.Config;
 import utilities.JWTFactory;
+import views.html.forbidden;
 import views.html.login;
 import views.html.login_failure;
 import views.html.login_success;
@@ -22,10 +24,16 @@ import java.util.List;
 public class Login extends Controller {
 
     public Result loginPage() {
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName));
+
         return ok(login.render(Config.ServerName));
     }
 
     public Result handlePerformLogin() {
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName));
+        
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");

@@ -7,9 +7,11 @@ import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utilities.AuthManager;
 import utilities.Config;
 import utilities.KeyGenerator;
 import utilities.Mailer;
+import views.html.forbidden;
 import views.html.register;
 import views.html.register_failure;
 import views.html.register_success;
@@ -20,10 +22,16 @@ import views.html.register_success;
 
 public class Register extends Controller {
     public Result registerPage() {
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName));
+
         return ok(register.render(Config.ServerName));
     }
 
     public Result handleRegisterPerform() {
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName));
+
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");

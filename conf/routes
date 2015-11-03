@@ -12,13 +12,15 @@ GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
 GET     /debug/createJWT            controllers.Debug.createJWT()
 GET     /debug/populate             controllers.Debug.populateWithTestData()
 
-POST    /login/perform              controllers.pub.unauthenticated.Login.handlePerformLogin()
-
-POST    /register/perform           controllers.pub.unauthenticated.Register.handleRegisterPerform()
 GET     /register/validate          controllers.pub.user.ValidateEmail.handleValidation()
 
 GET     /login                      controllers.pub.unauthenticated.Login.loginPage()
+POST    /login                      controllers.pub.unauthenticated.Login.handlePerformLogin()
+
 GET     /register                   controllers.pub.unauthenticated.Register.registerPage()
+POST    /register                   controllers.pub.unauthenticated.Register.handleRegisterPerform()
+
+GET     /logout                     controllers.pub.user.Logout.handleLogout()
 
 GET     /rsa/base64                 controllers.api.Login.getJWTPublicKey()
 
