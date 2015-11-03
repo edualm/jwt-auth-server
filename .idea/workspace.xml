@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" afterPath="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -78,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Logout.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Logout.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Logout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.47468355">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30379745">
+            <state vertical-scroll-proportion="0.0">
               <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -229,10 +229,10 @@
         <option value="$PROJECT_DIR$/app/views/forbidden.scala.html" />
         <option value="$PROJECT_DIR$/app/views/register_success.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/pub/user/ValidateEmail.java" />
-        <option value="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
         <option value="$PROJECT_DIR$/app/controllers/api/Login.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
+        <option value="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
       </list>
     </option>
   </component>
@@ -986,13 +986,7 @@
       <workItem from="1446124248827" duration="22000" />
       <workItem from="1446124710230" duration="378000" />
       <workItem from="1446309169305" duration="7536000" />
-      <workItem from="1446548476356" duration="7673000" />
-    </task>
-    <task id="LOCAL-00052" summary="Added bootstrap, group and group&lt;-&gt;user many2many table. Still miss the endpoint tables.">
-      <created>1445594461304</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1445594461305</updated>
+      <workItem from="1446548476356" duration="8396000" />
     </task>
     <task id="LOCAL-00053" summary="Fixed up some annotations.">
       <created>1445597426218</created>
@@ -1282,11 +1276,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446559127426</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary=":v">
+      <created>1446559316534</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1446559316534</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103286000" />
+    <option name="totallyTimeSpent" value="104009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="835" extended-state="6" />
@@ -1335,7 +1335,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed back to default bootstrap." />
     <MESSAGE value="Fixed (?) CSS." />
     <MESSAGE value="This is not gonna even work." />
     <MESSAGE value="Small rename." />
@@ -1360,7 +1359,8 @@
     <MESSAGE value="Normalized usernames, fixed auth cookie." />
     <MESSAGE value="Fixed JWT audience." />
     <MESSAGE value="Added validation check." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation check." />
+    <MESSAGE value=":v" />
+    <option name="LAST_COMMIT_MESSAGE" value=":v" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1587,7 +1587,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1722,16 +1722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Logout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1764,6 +1754,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1774,10 +1774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Logout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30379745">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.47468355">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
