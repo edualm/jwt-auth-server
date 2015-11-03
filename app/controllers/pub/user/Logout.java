@@ -18,6 +18,6 @@ public class Logout extends Controller {
 
             return ok(logout_success.render(Config.ServerName));
         } else
-            return forbidden(forbidden.render(Config.ServerName));
+            return forbidden(forbidden.render(Config.ServerName, false));
     }
 }

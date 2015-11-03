@@ -6,7 +6,9 @@ import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utilities.AuthManager;
 import utilities.Config;
+import views.html.forbidden;
 import views.html.validate_failure;
 import views.html.validate_success;
 
@@ -16,6 +18,9 @@ import views.html.validate_success;
 
 public class ValidateEmail extends Controller {
     public Result handleValidation() {
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName, true));
+
         DynamicForm form = Form.form().bindFromRequest();
 
         String user = form.get("username");

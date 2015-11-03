@@ -16,7 +16,7 @@ public class Mailer {
         e.setFrom(Config.kEmailFrom);
         e.setSubject("Validate your registration on " + Config.ServerName);
         e.setText("Hello,\n\nThanks for your registration!\n\nPlease validate your account at " +
-                Config.ServerURL + "public/validate?username=" + username + "&validationKey=" +
+                Config.ServerURL + "register/validate?username=" + username + "&validationKey=" +
                 validationKey +"\n\nThanks,\n" + Config.ServerName);
 
         try {

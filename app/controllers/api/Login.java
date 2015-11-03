@@ -3,6 +3,7 @@ package controllers.api;
 import com.avaje.ebean.Ebean;
 
 import models.Password;
+import models.UserAttribute;
 import models.UserData;
 
 import play.data.DynamicForm;
@@ -39,6 +40,10 @@ public class Login extends Controller {
             return notFound("{\"error\": \"User not found.\"}");
 
         UserData u = users.get(0);
+
+        for (UserAttribute a : u.attributes)
+            if (a.key.equals("validation-key"))
+                return forbidden("{\"error\": \"Account not validated.\"}");
 
         if (!u.enabled)
             return notFound("{\"error\": \"Resource disabled.\"}");

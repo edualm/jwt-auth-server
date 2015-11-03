@@ -2,6 +2,7 @@ package controllers.pub.unauthenticated;
 
 import com.avaje.ebean.Ebean;
 import models.Password;
+import models.UserAttribute;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
@@ -25,14 +26,14 @@ public class Login extends Controller {
 
     public Result loginPage() {
         if (AuthManager.isLoggedIn(request().cookies()))
-            return forbidden(forbidden.render(Config.ServerName));
+            return forbidden(forbidden.render(Config.ServerName, true));
 
         return ok(login.render(Config.ServerName));
     }
 
     public Result handlePerformLogin() {
         if (AuthManager.isLoggedIn(request().cookies()))
-            return forbidden(forbidden.render(Config.ServerName));
+            return forbidden(forbidden.render(Config.ServerName, true));
 
         DynamicForm form = Form.form().bindFromRequest();
 
@@ -54,6 +55,10 @@ public class Login extends Controller {
             return ok(login_failure.render(Config.ServerName, "User not found."));
 
         UserData u = users.get(0);
+
+        for (UserAttribute a : u.attributes)
+            if (a.key.equals("validation-key"))
+                return forbidden(login_failure.render(Config.ServerName, "Account not validated!"));
 
         if (!u.enabled)
             return ok(login_failure.render(Config.ServerName, "Resource disabled."));
