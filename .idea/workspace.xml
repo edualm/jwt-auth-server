@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/Login.java" afterPath="$PROJECT_DIR$/app/controllers/api/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" afterPath="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utilities/Mailer.java" afterPath="$PROJECT_DIR$/app/utilities/Mailer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/user/ValidateEmail.java" afterPath="$PROJECT_DIR$/app/controllers/pub/user/ValidateEmail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forbidden.scala.html" afterPath="$PROJECT_DIR$/app/views/forbidden.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/register_success.scala.html" afterPath="$PROJECT_DIR$/app/views/register_success.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jwt-auth-server.iws" />
@@ -128,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5063291">
+            <state vertical-scroll-proportion="0.0">
               <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
               <folding />
             </state>
@@ -144,6 +138,18 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="53" column="64" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="64" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30379745">
+              <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,7 +224,6 @@
         <option value="$PROJECT_DIR$/app/utilities/AuthManager.java" />
         <option value="$PROJECT_DIR$/app/controllers/api/Register.java" />
         <option value="$PROJECT_DIR$/app/utilities/JWTValidator.java" />
-        <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/utilities/Mailer.java" />
         <option value="$PROJECT_DIR$/app/views/forbidden.scala.html" />
@@ -227,6 +232,7 @@
         <option value="$PROJECT_DIR$/app/controllers/pub/user/Logout.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Login.java" />
         <option value="$PROJECT_DIR$/app/controllers/api/Login.java" />
+        <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
       </list>
     </option>
   </component>
@@ -980,13 +986,7 @@
       <workItem from="1446124248827" duration="22000" />
       <workItem from="1446124710230" duration="378000" />
       <workItem from="1446309169305" duration="7536000" />
-      <workItem from="1446548476356" duration="7485000" />
-    </task>
-    <task id="LOCAL-00051" summary="Added RSA Public Key export. And a lot more.">
-      <created>1445549312463</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1445549312463</updated>
+      <workItem from="1446548476356" duration="7673000" />
     </task>
     <task id="LOCAL-00052" summary="Added bootstrap, group and group&lt;-&gt;user many2many table. Still miss the endpoint tables.">
       <created>1445594461304</created>
@@ -1276,11 +1276,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446558017666</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Added validation check.">
+      <created>1446559127426</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1446559127426</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103098000" />
+    <option name="totallyTimeSpent" value="103286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="835" extended-state="6" />
@@ -1329,7 +1335,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added missing WebJARs..." />
     <MESSAGE value="Changed back to default bootstrap." />
     <MESSAGE value="Fixed (?) CSS." />
     <MESSAGE value="This is not gonna even work." />
@@ -1354,7 +1359,8 @@
     <MESSAGE value="Let's use an URI instead..." />
     <MESSAGE value="Normalized usernames, fixed auth cookie." />
     <MESSAGE value="Fixed JWT audience." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed JWT audience." />
+    <MESSAGE value="Added validation check." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation check." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1586,16 +1592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utilities/Mailer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1752,6 +1748,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1770,11 +1774,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/Login.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5063291">
-          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-          <folding />
+        <state vertical-scroll-proportion="0.30379745">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

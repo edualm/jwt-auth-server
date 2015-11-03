@@ -23,14 +23,14 @@ import views.html.register_success;
 public class Register extends Controller {
     public Result registerPage() {
         if (AuthManager.isLoggedIn(request().cookies()))
-            return forbidden(forbidden.render(Config.ServerName));
+            return forbidden(forbidden.render(Config.ServerName, true));
 
         return ok(register.render(Config.ServerName));
     }
 
     public Result handleRegisterPerform() {
         if (AuthManager.isLoggedIn(request().cookies()))
-            return forbidden(forbidden.render(Config.ServerName));
+            return forbidden(forbidden.render(Config.ServerName, true));
 
         DynamicForm form = Form.form().bindFromRequest();
 
