@@ -1,11 +1,15 @@
 @(title: String, callback: String)
 
-@main(title) {
+@main(title, true) {
 
   <div class="page-header">
     <h1>Authentication <small>Success</small></h1>
   </div>
 
-  <p>You will now be redirected to your app...</p>
-
+    @if(callback.equals("")) {
+        <p>No callback defined.</p>
+    } else {
+        <p>You will now be redirected to your app...</p>
+        <meta http-equiv="refresh" content="2; url=@callback" />
+    }
 }

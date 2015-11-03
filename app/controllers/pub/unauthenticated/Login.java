@@ -30,6 +30,9 @@ public class Login extends Controller {
 
         String user = form.get("username");
         String pass = form.get("password");
+        String callback = form.get("callback");
+
+        //  Need to implement callback.
 
         if (user == null || user == "")
             return ok(login_failure.render(Config.ServerName, "Missing field: \"username\"."));
@@ -51,9 +54,10 @@ public class Login extends Controller {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
             if (pi.validate(pass)) {
-                return ok(login_success.render(Config.ServerName, JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false)));
-
-                //  return ok("{\"success\": true, \"jwt\": \"" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false) + "\"}");
+                if (callback != "")
+                    return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false)));
+                else
+                    return ok(login_success.render(Config.ServerName, ""));
             } else {
                 return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
             }

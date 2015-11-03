@@ -12,15 +12,15 @@ GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
 GET     /debug/createJWT            controllers.Debug.createJWT()
 GET     /debug/populate             controllers.Debug.populateWithTestData()
 
-POST    /public/login/perform       controllers.pub.unauthenticated.Login.handlePerformLogin()
-POST    /public/register/perform    controllers.pub.unauthenticated.Register.handleRegisterPerform()
+POST    /login/perform              controllers.pub.unauthenticated.Login.handlePerformLogin()
 
-GET     /public/login               controllers.pub.unauthenticated.Login.loginPage()
-GET     /public/register            controllers.pub.unauthenticated.Register.registerPage()
+POST    /register/perform           controllers.pub.unauthenticated.Register.handleRegisterPerform()
+GET     /register/validate          controllers.pub.user.ValidateEmail.handleValidation()
 
-GET     /public/validate            controllers.pub.user.ValidateEmail.handleValidation()
+GET     /login                      controllers.pub.unauthenticated.Login.loginPage()
+GET     /register                   controllers.pub.unauthenticated.Register.registerPage()
 
-GET     /public/rsa/base64          controllers.api.Login.getJWTPublicKey()
+GET     /rsa/base64                 controllers.api.Login.getJWTPublicKey()
 
 GET     /assets/*file               controllers.Assets.versioned(path = "/public", file: Asset)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
