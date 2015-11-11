@@ -22,7 +22,7 @@ POST    /register                   controllers.pub.unauthenticated.Register.han
 
 GET     /logout                     controllers.pub.user.Logout.handleLogout()
 
-GET     /settings/changePassword    controllers.pub.user.Settings.handlePasswordChange()
+POST    /settings/changePassword    controllers.pub.user.Settings.handlePasswordChange()
 GET     /settings                   controllers.pub.user.Settings.handleSettings()
 
 GET     /rsa/base64                 controllers.api.Login.getJWTPublicKey()
