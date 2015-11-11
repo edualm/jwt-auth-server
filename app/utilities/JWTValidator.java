@@ -32,4 +32,25 @@ public class JWTValidator {
             return false;
         }
     }
+
+    public static String getUsernameFromToken(String jwt) {
+        JwtConsumer jwtConsumer = new JwtConsumerBuilder()
+                .setRequireExpirationTime() // the JWT must have an expiration time
+                .setAllowedClockSkewInSeconds(30) // allow some leeway in validating time based claims to account for clock skew
+                .setRequireSubject() // the JWT must have a subject claim
+                .setExpectedIssuer(Config.ServerName) // whom the JWT needs to have been issued by
+                .setExpectedAudience(Config.ServerName) // to whom the JWT is intended for
+                .setVerificationKey(Config.getJsonWebKey().getKey()) // verify the signature with the public key
+                .build(); // create the JwtConsumer instance
+
+        try {
+            JwtClaims jwtClaims = jwtConsumer.processToClaims(jwt);
+
+            System.out.println("JWT validation succeeded! " + jwtClaims);
+
+            return (String) jwtClaims.getClaimValue("username");
+        } catch (InvalidJwtException e) {
+            return null;
+        }
+    }
 }

@@ -15,4 +15,13 @@ public class AuthManager {
 
         return (JWTValidator.acceptToken(authCookie.value()));
     }
+
+    public static String currentUsername(Http.Cookies allCookies) {
+        Http.Cookie authCookie = allCookies.get("jwt");
+
+        if (authCookie == null)
+            return null;
+
+        return (JWTValidator.getUsernameFromToken(authCookie.value()));
+    }
 }
