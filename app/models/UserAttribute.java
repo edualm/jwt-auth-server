@@ -17,7 +17,7 @@ public class UserAttribute extends Model {
     @Column(unique = true)
     public Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id", referencedColumnName = "id")
     public UserData user;
 

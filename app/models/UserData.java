@@ -67,7 +67,7 @@ public class UserData extends Model {
     @OneToMany(mappedBy = "user")
     public List<UserAttribute> attributes;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
     public List<Category> categories;
 
     public UserData(String username, String password, String emailAddress, String firstName, String lastName) {
