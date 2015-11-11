@@ -52,7 +52,7 @@ public class Login extends Controller {
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0)
-            return ok(login_failure.render(Config.ServerName, "User not found."));
+            return ok(login_failure.render(Config.ServerName, "User not found: " + user));
 
         UserData u = users.get(0);
 

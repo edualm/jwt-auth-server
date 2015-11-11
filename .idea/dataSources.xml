@@ -6,7 +6,6 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://ec2-54-83-36-203.compute-1.amazonaws.com:5432/dejc8kaatfkg26</jdbc-url>
-      <libraries />
     </data-source>
   </component>
 </project>
