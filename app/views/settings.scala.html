@@ -8,8 +8,6 @@
 
     <h2>Change Password</h2>
 
-    <hr />
-
     <form class="form-horizontal" action="/settings/changePassword" method="POST">
         <div class="form-group">
             <label for="old-pw" class="col-sm-2 control-label">Old Password</label>
@@ -27,6 +25,24 @@
             <label for="new-pw-confirm" class="col-sm-2 control-label">Confirm New Password</label>
             <div class="col-sm-10">
                 <input type="password" class="form-control" id="new-pw-confirm" name="new-pw-confirm" placeholder="Confirm New Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-danger">Change Password</button>
+            </div>
+        </div>
+    </form>
+
+    <hr />
+
+    <h2>Change E-Mail Address</h2>
+
+    <form class="form-horizontal" action="/settings/changeEmailAddress" method="POST">
+        <div class="form-group">
+            <label for="old-pw" class="col-sm-2 control-label">New E-Mail Address</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="new-email" name="new-email" placeholder="New E-Mail Address">
             </div>
         </div>
         <div class="form-group">
