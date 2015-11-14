@@ -99,7 +99,7 @@ public class Settings extends Controller {
         if (Mailer.sendEmailChangeEmail(username, user.emailAddress, newEmail, key)) {
             return ok(generic_success.render(Config.ServerName, "Please check your (new) e-mail address for instructions on how to complete this process."));
         } else {
-            return internalServerError(generic_error.success(Config.ServerName, "An error has occurred while sending an e-mail address."));
+            return internalServerError(generic_failure.render(Config.ServerName, "An error has occurred while sending an e-mail address."));
         }
     }
 
