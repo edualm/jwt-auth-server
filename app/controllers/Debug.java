@@ -24,8 +24,6 @@ public class Debug extends Controller {
             }
         }
 
-        //  return ok(Json.stringify(Json.toJson(users)));
-
         return ok();
     }
 

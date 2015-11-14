@@ -6,6 +6,7 @@ import org.jose4j.jwk.PublicJsonWebKey;
 import org.jose4j.jwk.RsaJsonWebKey;
 import org.jose4j.keys.RsaKeyUtil;
 import org.jose4j.lang.JoseException;
+import play.mvc.Http;
 
 import java.io.IOException;
 import java.security.*;
@@ -31,10 +32,18 @@ public class Config {
     private static RsaJsonWebKey jsonWebKey = null;
 
     static public final String ServerName = "Audiência Zero SSO";
-    static public final String ServerURL = "https://audiencia-zero-auth.herokuapp.com/";
-    static public final String ServerURI = "audiencia-zero-auth.herokuapp.com";
+    //  static public final String ServerURL = "https://audiencia-zero-auth.herokuapp.com/";
+    //  static public final String ServerURI = "audiencia-zero-auth.herokuapp.com";
 
     static public final Integer MinimumPasswordLength = 8;
+
+    static public String getServerURL(Http.Request request) {
+        return "https://" + getServerURI(request) + "/";
+    }
+
+    static public String getServerURI(Http.Request request) {
+        return request.headers().get("Host")[0];
+    }
 
     static public RsaJsonWebKey getJsonWebKey() {
         if (jsonWebKey == null)

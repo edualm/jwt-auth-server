@@ -14,7 +14,7 @@ import views.html.logout_success;
 public class Logout extends Controller {
     public Result handleLogout() {
         if (AuthManager.isLoggedIn(request().cookies())) {
-            response().discardCookie("jwt", "/", Config.ServerURI);
+            response().discardCookie("jwt", "/", Config.getServerURI(request()));
 
             return ok(logout_success.render(Config.ServerName));
         } else
