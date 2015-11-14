@@ -4,7 +4,6 @@
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/user/Settings.java" afterPath="$PROJECT_DIR$/app/controllers/pub/user/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/settings.scala.html" afterPath="$PROJECT_DIR$/app/views/settings.scala.html" />
     </list>
     <ignored path="jwt-auth-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +74,8 @@
       <file leaf-file-name="Settings.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2626506">
-              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.87710845">
+              <caret line="101" column="87" selection-start-line="101" selection-start-column="87" selection-end-line="101" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1304,13 +1303,7 @@
       <workItem from="1447520320560" duration="3017000" />
       <workItem from="1447535428569" duration="1453000" />
       <workItem from="1447537383684" duration="459000" />
-      <workItem from="1447537941620" duration="3135000" />
-    </task>
-    <task id="LOCAL-00068" summary="I really have no idea.">
-      <created>1445632427324</created>
-      <option name="number" value="00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1445632427324</updated>
+      <workItem from="1447537941620" duration="3774000" />
     </task>
     <task id="LOCAL-00069" summary="Dumbifying a debug call...">
       <created>1445633222031</created>
@@ -1600,11 +1593,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447540497710</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Fixed issues reported by PedroSama.">
+      <created>1447542645918</created>
+      <option name="number" value="00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1447542645918</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123698000" />
+    <option name="totallyTimeSpent" value="124337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1369" extended-state="6" />
@@ -1653,7 +1652,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Huh." />
     <MESSAGE value="Honestly I doubt these templates will even compile." />
     <MESSAGE value="Aha, the syntax was all wrong." />
     <MESSAGE value="Access Control and Log Out implemented." />
@@ -1678,7 +1676,8 @@
     <MESSAGE value="Oh well, another typo." />
     <MESSAGE value="Fixed cookie, hopefully." />
     <MESSAGE value="Good to go, in my oppinion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Good to go, in my oppinion." />
+    <MESSAGE value="Fixed issues reported by PedroSama." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues reported by PedroSama." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2086,8 +2085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2626506">
-          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.87710845">
+          <caret line="101" column="87" selection-start-line="101" selection-start-column="87" selection-end-line="101" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
