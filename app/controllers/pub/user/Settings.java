@@ -96,7 +96,7 @@ public class Settings extends Controller {
         newEmailAttribute.save();
         emailChangeAttribute.save();
 
-        Mailer m = new Mailer(Config.getServerURI(request()));
+        Mailer m = new Mailer(Config.getServerURL(request()));
 
         if (m.sendEmailChangeEmail(username, user.emailAddress, newEmail, key)) {
             return ok(generic_success.render(Config.ServerName, "Please check your (new) e-mail address for instructions on how to complete this process."));
