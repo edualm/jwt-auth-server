@@ -1075,13 +1075,7 @@
       <workItem from="1447420096015" duration="489000" />
       <workItem from="1447440408446" duration="35000" />
       <workItem from="1447520320560" duration="3017000" />
-      <workItem from="1447535428569" duration="251000" />
-    </task>
-    <task id="LOCAL-00065" summary="Fixed User Attributes table. Now, for real. :P">
-      <created>1445630332341</created>
-      <option name="number" value="00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1445630332341</updated>
+      <workItem from="1447535428569" duration="262000" />
     </task>
     <task id="LOCAL-00066" summary="Merged all evolutions, fixed up db.">
       <created>1445631218885</created>
@@ -1371,11 +1365,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447535524698</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Oh well, another typo.">
+      <created>1447535779641</created>
+      <option name="number" value="00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1447535779642</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118902000" />
+    <option name="totallyTimeSpent" value="118913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1369" extended-state="6" />
@@ -1424,7 +1424,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added e-mail validation on the API registration." />
     <MESSAGE value="Any chance it works now?" />
     <MESSAGE value="Forgot to actually do the validation call." />
     <MESSAGE value="Huh." />
@@ -1449,7 +1448,8 @@
     <MESSAGE value="No, YOU are deprecated." />
     <MESSAGE value="(Hopefully) implemented change password." />
     <MESSAGE value="Fixed routes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed routes." />
+    <MESSAGE value="Oh well, another typo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Oh well, another typo." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
