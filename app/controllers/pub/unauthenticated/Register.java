@@ -70,7 +70,9 @@ public class Register extends Controller {
 
         val.save();
 
-        if (Mailer.sendValidationEmail(user, email, val.value))
+        Mailer m = new Mailer(Config.getServerURI(request()));
+
+        if (m.sendValidationEmail(user, email, val.value))
             return ok(register_success.render(Config.ServerName));
         else
             return internalServerError(register_failure.render(Config.ServerName, "Couldn't send validation e-mail!"));

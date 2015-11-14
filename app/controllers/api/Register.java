@@ -55,7 +55,9 @@ public class Register extends Controller {
 
         val.save();
 
-        if (Mailer.sendValidationEmail(user, email, val.value))
+        Mailer m = new Mailer(Config.getServerURI(request()));
+
+        if (m.sendValidationEmail(user, email, val.value))
             return ok("{\"result\": \"success\"}");
         else
             return internalServerError("{\"result\": \"ko\"}");
