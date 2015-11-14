@@ -22,7 +22,7 @@ POST    /register                       controllers.pub.unauthenticated.Register
 
 GET     /logout                         controllers.pub.user.Logout.handleLogout()
 
-GET     /settings/confirmChangeEmail    controllers.pub.user.settings.handleEmailChangeConfirmation()
+GET     /settings/confirmChangeEmail    controllers.pub.user.Settings.handleEmailChangeConfirmation()
 
 POST    /settings/changeEmailAddress    controllers.pub.user.Settings.handleEmailChange()
 POST    /settings/changePassword        controllers.pub.user.Settings.handlePasswordChange()
