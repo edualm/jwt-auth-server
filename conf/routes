@@ -2,30 +2,33 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.pub.Application.index()
+GET     /                               controllers.pub.Application.index()
 
-POST    /api/register               controllers.api.Register.signup()
-POST    /api/login                  controllers.api.Login.login()
-POST    /api/user/changePassword    controllers.api.ManageUser.changePassword()
+POST    /api/register                   controllers.api.Register.signup()
+POST    /api/login                      controllers.api.Login.login()
+POST    /api/user/changePassword        controllers.api.ManageUser.changePassword()
 
-GET     /debug/showAllUsers         controllers.Debug.showAllUsers()
-GET     /debug/createJWT            controllers.Debug.createJWT()
-GET     /debug/populate             controllers.Debug.populateWithTestData()
+GET     /debug/showAllUsers             controllers.Debug.showAllUsers()
+GET     /debug/createJWT                controllers.Debug.createJWT()
+GET     /debug/populate                 controllers.Debug.populateWithTestData()
 
-GET     /register/validate          controllers.pub.user.ValidateEmail.handleValidation()
+GET     /register/validate              controllers.pub.user.ValidateEmail.handleValidation()
 
-GET     /login                      controllers.pub.unauthenticated.Login.loginPage()
-POST    /login                      controllers.pub.unauthenticated.Login.handlePerformLogin()
+GET     /login                          controllers.pub.unauthenticated.Login.loginPage()
+POST    /login                          controllers.pub.unauthenticated.Login.handlePerformLogin()
 
-GET     /register                   controllers.pub.unauthenticated.Register.registerPage()
-POST    /register                   controllers.pub.unauthenticated.Register.handleRegisterPerform()
+GET     /register                       controllers.pub.unauthenticated.Register.registerPage()
+POST    /register                       controllers.pub.unauthenticated.Register.handleRegisterPerform()
 
-GET     /logout                     controllers.pub.user.Logout.handleLogout()
+GET     /logout                         controllers.pub.user.Logout.handleLogout()
 
-POST    /settings/changePassword    controllers.pub.user.Settings.handlePasswordChange()
-GET     /settings                   controllers.pub.user.Settings.handleSettings()
+GET     /settings/confirmChangeEmail    controllers.pub.user.settings.handleEmailChangeConfirmation()
 
-GET     /rsa/base64                 controllers.api.Login.getJWTPublicKey()
+POST    /settings/changeEmailAddress    controllers.pub.user.Settings.handleEmailChange()
+POST    /settings/changePassword        controllers.pub.user.Settings.handlePasswordChange()
+GET     /settings                       controllers.pub.user.Settings.handleSettings()
 
-GET     /assets/*file               controllers.Assets.versioned(path = "/public", file: Asset)
-GET     /webjars/*file              controllers.WebJarAssets.at(file)
+GET     /rsa/base64                     controllers.api.Login.getJWTPublicKey()
+
+GET     /assets/*file                   controllers.Assets.versioned(path = "/public", file: Asset)
+GET     /webjars/*file                  controllers.WebJarAssets.at(file)
