@@ -69,7 +69,7 @@ public class Settings extends Controller {
     public Result handleEmailChange() {
         DynamicForm form = Form.form().bindFromRequest();
 
-        String newEmail = form.get("newEmail");
+        String newEmail = form.get("new-email");
 
         if (newEmail == null || newEmail.equals(""))
             return badRequest(generic_failure.render(Config.ServerName, "E-mail can't be blank!"));

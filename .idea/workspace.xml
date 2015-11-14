@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d37a180b-c1ae-489a-9710-2c8a1711821e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/Register.java" afterPath="$PROJECT_DIR$/app/controllers/api/Register.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" afterPath="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pub/user/Settings.java" afterPath="$PROJECT_DIR$/app/controllers/pub/user/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utilities/Mailer.java" afterPath="$PROJECT_DIR$/app/utilities/Mailer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/settings.scala.html" afterPath="$PROJECT_DIR$/app/views/settings.scala.html" />
     </list>
     <ignored path="jwt-auth-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,11 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.2626506">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,25 +108,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mailer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mailer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/utilities/Mailer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25404733">
+            <state vertical-scroll-proportion="-7.5555553">
               <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
                 <element signature="e#235#236#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidateEmail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/ValidateEmail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,6 +158,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.scala.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/settings.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.23077">
+              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -256,7 +254,6 @@
         <option value="$PROJECT_DIR$/conf/evolutions/default/3.sql" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/RecoverPassword.java" />
         <option value="$PROJECT_DIR$/app/views/password_recovery.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/settings.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/controllers/Debug.java" />
         <option value="$PROJECT_DIR$/app/utilities/Config.java" />
@@ -265,6 +262,7 @@
         <option value="$PROJECT_DIR$/app/utilities/Mailer.java" />
         <option value="$PROJECT_DIR$/app/controllers/api/Register.java" />
         <option value="$PROJECT_DIR$/app/controllers/pub/unauthenticated/Register.java" />
+        <option value="$PROJECT_DIR$/app/views/settings.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/pub/user/Settings.java" />
       </list>
     </option>
@@ -1306,13 +1304,7 @@
       <workItem from="1447520320560" duration="3017000" />
       <workItem from="1447535428569" duration="1453000" />
       <workItem from="1447537383684" duration="459000" />
-      <workItem from="1447537941620" duration="2485000" />
-    </task>
-    <task id="LOCAL-00067" summary="I don't know SQL anymore, apparently?">
-      <created>1445631403223</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1445631403223</updated>
+      <workItem from="1447537941620" duration="3135000" />
     </task>
     <task id="LOCAL-00068" summary="I really have no idea.">
       <created>1445632427324</created>
@@ -1602,11 +1594,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447539917928</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Good to go, in my oppinion.">
+      <created>1447540497709</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1447540497710</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123048000" />
+    <option name="totallyTimeSpent" value="123698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1369" extended-state="6" />
@@ -1655,7 +1653,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Forgot to actually do the validation call." />
     <MESSAGE value="Huh." />
     <MESSAGE value="Honestly I doubt these templates will even compile." />
     <MESSAGE value="Aha, the syntax was all wrong." />
@@ -1680,7 +1677,8 @@
     <MESSAGE value="Fixed routes." />
     <MESSAGE value="Oh well, another typo." />
     <MESSAGE value="Fixed cookie, hopefully." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed cookie, hopefully." />
+    <MESSAGE value="Good to go, in my oppinion." />
+    <option name="LAST_COMMIT_MESSAGE" value="Good to go, in my oppinion." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1915,14 +1913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/settings.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utilities/AuthManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2075,23 +2065,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utilities/Mailer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25404733">
+        <state vertical-scroll-proportion="-7.5555553">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
             <element signature="e#193#194#0" expanded="true" />
             <element signature="e#235#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/settings.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.23077">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pub/user/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2626506">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
