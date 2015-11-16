@@ -46,6 +46,8 @@ public class RecoverPassword extends Controller {
             return internalServerError(generic_failure.render(Config.ServerName, e.getMessage()));
         }
 
+        u.save();
+
         Mailer m = new Mailer(Config.ServerName);
 
         if (m.sendEmailPasswordChanged(u.username, u.emailAddress, newPassword)) {
