@@ -37,6 +37,17 @@ public class Mailer {
         return send(e);
     }
 
+    public boolean sendEmailPasswordChanged(String username, String email, String newPassword) {
+        SendGrid.Email e = makeEmailEasy(email,
+                Config.kEmailFrom,
+                "New Password: " + Config.ServerName,
+                "Hello,\n\nA request was made by you or someone on your behalf to change the password address associated with the account " + username + "." +
+                        "\n\nYour new password is: " + newPassword +
+                        "\n\nThanks,\n" + Config.ServerName);
+
+        return send(e);
+    }
+
     private SendGrid.Email makeEmailEasy(String to, String from, String subject, String text) {
         SendGrid.Email e = new SendGrid.Email();
 

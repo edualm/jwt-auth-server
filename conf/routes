@@ -20,6 +20,9 @@ POST    /login                          controllers.pub.unauthenticated.Login.ha
 GET     /register                       controllers.pub.unauthenticated.Register.registerPage()
 POST    /register                       controllers.pub.unauthenticated.Register.handleRegisterPerform()
 
+GET     /forgot                         controllers.pub.unauthenticated.RecoverPassword.forgotPage()
+POST    /forgot                         controllers.pub.unauthenticated.RecoverPassword.handleForgot()
+
 GET     /logout                         controllers.pub.user.Logout.handleLogout()
 
 GET     /settings/confirmChangeEmail    controllers.pub.user.Settings.handleEmailChangeConfirmation()
