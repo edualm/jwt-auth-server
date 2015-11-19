@@ -13,6 +13,7 @@ import utilities.AuthManager;
 import utilities.Config;
 import utilities.KeyGenerator;
 import utilities.Mailer;
+import views.html.forbidden;
 import views.html.generic_failure;
 import views.html.generic_success;
 import views.html.settings;
