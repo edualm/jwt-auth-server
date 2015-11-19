@@ -31,10 +31,10 @@ public class RecoverPassword extends Controller {
         UserData u = UserData.getUserDataFromUsername(user);
 
         if (u == null)
-            return notFound(generic_failure.render(Config.ServerName, "User not found!"));
+            return notFound(generic_failure.render(Config.ServerName, false, "User not found!"));
 
         if (!u.emailAddress.equals(email))
-            return notFound(generic_failure.render(Config.ServerName, "The inserted e-mail address is incorrect."));
+            return notFound(generic_failure.render(Config.ServerName, false, "The inserted e-mail address is incorrect."));
 
         KeyGenerator g = new KeyGenerator();
 
@@ -43,7 +43,7 @@ public class RecoverPassword extends Controller {
         try {
             u.changePassword(newPassword);
         } catch (Exception e) {
-            return internalServerError(generic_failure.render(Config.ServerName, e.getMessage()));
+            return internalServerError(generic_failure.render(Config.ServerName, false, e.getMessage()));
         }
 
         u.save();
@@ -51,9 +51,9 @@ public class RecoverPassword extends Controller {
         Mailer m = new Mailer(Config.ServerName);
 
         if (m.sendEmailPasswordChanged(u.username, u.emailAddress, newPassword)) {
-            return ok(generic_success.render(Config.ServerName, "A new password has been sent to your e-mail address."));
+            return ok(generic_success.render(Config.ServerName, false, "A new password has been sent to your e-mail address."));
         } else {
-            return internalServerError(generic_success.render(Config.ServerName, "Unable to send an e-mail. Please try again."));
+            return internalServerError(generic_success.render(Config.ServerName, false, "Unable to send an e-mail. Please try again."));
         }
     }
 

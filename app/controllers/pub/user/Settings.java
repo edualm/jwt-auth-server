@@ -39,23 +39,23 @@ public class Settings extends Controller {
         String newPasswordConfirm = form.get("new-pw-confirm");
 
         if (!newPassword.equals(newPasswordConfirm))
-            return forbidden(generic_failure.render(Config.ServerName, "The new password and its confirmation don't match!"));
+            return forbidden(generic_failure.render(Config.ServerName, true, "The new password and its confirmation don't match!"));
 
         String username = AuthManager.currentUsername(request().cookies());
 
         if (username == null)
-            return forbidden(generic_failure.render(Config.ServerName, "Username not found!"));
+            return forbidden(generic_failure.render(Config.ServerName, false, "Username not found!"));
 
         UserData user = UserData.getUserDataFromUsername(username);
 
         if (user == null)
-            return forbidden(generic_failure.render(Config.ServerName, "User object not found!"));
+            return forbidden(generic_failure.render(Config.ServerName, false, "User object not found!"));
 
         try {
             Password oldP = new Password(user.passwordDigest, user.passwordSalt);
 
             if (!oldP.validate(oldPassword)) {
-                return forbidden(generic_failure.render(Config.ServerName, "Old password mismatch!"));
+                return forbidden(generic_failure.render(Config.ServerName, true, "Old password mismatch!"));
             }
 
             Password newP = new Password(newPassword);
@@ -65,9 +65,9 @@ public class Settings extends Controller {
 
             user.save();
 
-            return ok(generic_success.render(Config.ServerName, "Your password was successfully changed!"));
+            return ok(generic_success.render(Config.ServerName, true, "Your password was successfully changed!"));
         } catch (Exception e) {
-            return internalServerError(generic_failure.render(Config.ServerName, "Internal Server Error! " + e.getMessage()));
+            return internalServerError(generic_failure.render(Config.ServerName, true, "Internal Server Error! " + e.getMessage()));
         }
     }
 
@@ -77,17 +77,17 @@ public class Settings extends Controller {
         String newEmail = form.get("new-email");
 
         if (newEmail == null || newEmail.equals(""))
-            return badRequest(generic_failure.render(Config.ServerName, "E-mail can't be blank!"));
+            return badRequest(generic_failure.render(Config.ServerName, true, "E-mail can't be blank!"));
 
         Constraints.EmailValidator val = new Constraints.EmailValidator();
 
         if (!val.isValid(newEmail))
-            return badRequest(generic_failure.render(Config.ServerName, "The inserted e-mail is not valid!"));
+            return badRequest(generic_failure.render(Config.ServerName, true, "The inserted e-mail is not valid!"));
 
         String username = AuthManager.currentUsername(request().cookies());
 
         if (username == null)
-            return forbidden(generic_failure.render(Config.ServerName, "Username not found!"));
+            return forbidden(generic_failure.render(Config.ServerName, true, "Username not found!"));
 
         UserData user = UserData.getUserDataFromUsername(username);
 
@@ -104,9 +104,9 @@ public class Settings extends Controller {
         Mailer m = new Mailer(Config.getServerURL(request()));
 
         if (m.sendEmailChangeEmail(username, user.emailAddress, newEmail, key)) {
-            return ok(generic_success.render(Config.ServerName, "Please check your (old) e-mail address for instructions on how to complete this process."));
+            return ok(generic_success.render(Config.ServerName, true, "Please check your (old) e-mail address for instructions on how to complete this process."));
         } else {
-            return internalServerError(generic_failure.render(Config.ServerName, "An error has occurred while sending an e-mail address."));
+            return internalServerError(generic_failure.render(Config.ServerName, true, "An error has occurred while sending an e-mail address."));
         }
     }
 
@@ -119,7 +119,7 @@ public class Settings extends Controller {
         UserData user = UserData.getUserDataFromUsername(username);
 
         if (user == null)
-            return internalServerError(generic_failure.render(Config.ServerName, "Your user wasn't found in our servers."));
+            return internalServerError(generic_failure.render(Config.ServerName, false, "Your user wasn't found in our servers."));
 
         UserAttribute ecne = null;
         UserAttribute eck = null;
@@ -132,7 +132,7 @@ public class Settings extends Controller {
         }
 
         if (!eck.value.equals(key))
-            return internalServerError(generic_failure.render(Config.ServerName, "Key mismatch!"));
+            return internalServerError(generic_failure.render(Config.ServerName, true, "Key mismatch!"));
 
         user.emailAddress = ecne.value;
 
@@ -141,6 +141,6 @@ public class Settings extends Controller {
 
         user.save();
 
-        return ok(generic_success.render(Config.ServerName, "Successfully changed your e-mail address!"));
+        return ok(generic_success.render(Config.ServerName, true, "Successfully changed your e-mail address!"));
     }
 }
