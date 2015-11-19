@@ -1,7 +1,11 @@
-@(message: String)
+@(loggedIn: Boolean)
 
-@main("Welcome to Play", false) {
+@main("Audiência Zero SSO", loggedIn) {
 
-    @play20.welcome(message, style = "Java")
+<div class="page-header">
+    <h1>Audiência Zero SSO</h1>
+</div>
+
+<p>Welcome to Audiência Zero's SSO server!</p>
 
 }

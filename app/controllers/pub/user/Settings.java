@@ -1,5 +1,6 @@
 package controllers.pub.user;
 
+import models.Endpoint;
 import models.Password;
 import models.UserAttribute;
 import models.UserData;
@@ -23,7 +24,10 @@ import views.html.settings;
 public class Settings extends Controller {
 
     public Result handleSettings() {
-        return ok(settings.render(Config.ServerName));
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return ok(settings.render(Config.ServerName));
+
+        return forbidden(failure.render(Config.ServerName, false));
     }
 
     public Result handlePasswordChange() {
