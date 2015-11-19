@@ -27,7 +27,7 @@ public class Settings extends Controller {
         if (AuthManager.isLoggedIn(request().cookies()))
             return ok(settings.render(Config.ServerName));
 
-        return forbidden(failure.render(Config.ServerName, false));
+        return forbidden(forbidden.render(Config.ServerName, false));
     }
 
     public Result handlePasswordChange() {
