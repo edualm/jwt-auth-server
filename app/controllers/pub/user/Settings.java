@@ -18,6 +18,8 @@ import views.html.generic_failure;
 import views.html.generic_success;
 import views.html.settings;
 
+import java.util.ArrayList;
+
 /**
  * Created by MegaEduX on 27/10/15.
  */
@@ -90,6 +92,17 @@ public class Settings extends Controller {
             return forbidden(generic_failure.render(Config.ServerName, true, "Username not found!"));
 
         UserData user = UserData.getUserDataFromUsername(username);
+
+        ArrayList<UserAttribute> toRemove = new ArrayList<>();
+
+        for (UserAttribute a : user.attributes)
+            if (a.key.equals("emailChange-newEmail") || a.key.equals("emailChange-key"))
+                toRemove.add(a);
+
+        while (toRemove.size() > 0) {
+            toRemove.get(0).delete();
+            toRemove.remove(0);
+        }
 
         KeyGenerator kg = new KeyGenerator();
 
