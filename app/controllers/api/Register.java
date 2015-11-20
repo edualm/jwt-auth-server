@@ -26,6 +26,10 @@ public class Register extends Controller {
         String email = form.get("email");
         String firstName = form.get("firstName");
         String lastName = form.get("lastName");
+        String toc = form.get("toc");
+
+        if (toc == null || !toc.equals("true"))
+            return notFound("{\"error\": \"Terms and conditions not accepted.\"}");
 
         if (user == null || user == "")
             return notFound("{\"error\": \"Missing field: \"username\".\"}");

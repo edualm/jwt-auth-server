@@ -39,6 +39,10 @@ public class Register extends Controller {
         String email = form.get("email");
         String firstName = form.get("firstName");
         String lastName = form.get("lastName");
+        String toc = form.get("toc");
+
+        if (toc == null || !toc.equals("true"))
+            return ok(register_failure.render(Config.ServerName, "Terms and conditions not accepted."));
 
         if (user == null || user == "")
             return ok(register_failure.render(Config.ServerName, "Missing field: \"username\"."));
@@ -59,8 +63,6 @@ public class Register extends Controller {
             return ok(register_failure.render(Config.ServerName, "A user with this username or e-mail already exists!"));
 
         UserData u = new UserData(user, pass, email, firstName, lastName);
-
-        //  missing fn ln
 
         u.save();
 

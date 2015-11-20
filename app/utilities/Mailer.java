@@ -29,7 +29,7 @@ public class Mailer {
         SendGrid.Email e = makeEmailEasy(email,
                 Config.kEmailFrom,
                 "E-Mail Change Request: " + Config.ServerName,
-                "Hello,\n\nA request was made by you or someone on your behalf to change the e-mail address associated with the account " + username + " + to " + newEmail +
+                "Hello,\n\nA request was made by you or someone on your behalf to change the e-mail address associated with the account " + username + " to " + newEmail +
                 "\n\nIf you wish to perform this change, please accept it at the following address: " +
                 serverURL + "settings/confirmChangeEmail?username=" + username + "&key=" +
                 key + "\n\nThanks,\n" + Config.ServerName);
