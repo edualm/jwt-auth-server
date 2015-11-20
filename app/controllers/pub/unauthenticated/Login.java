@@ -41,6 +41,13 @@ public class Login extends Controller {
         String pass = form.get("password");
         String callback = form.get("callback");
 
+        String remStr = form.get("remember");
+
+        boolean remember = false;
+
+        if (remStr != null && remStr.equals("true"))
+            remember = true;
+
         //  Need to implement callback.
 
         if (user == null || user == "")
@@ -68,12 +75,12 @@ public class Login extends Controller {
 
             if (pi.validate(pass)) {
                 if (callback != null && callback != "")
-                    return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false)));
+                    return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember)));
                 else {
                     response().setCookie(
                             "jwt",
-                            JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", true),
-                            3600,
+                            JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember),
+                            (remember ? 1209600 : 3600),
                             "/",
                             Config.getServerURI(request()),
                             true,
