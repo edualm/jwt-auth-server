@@ -104,12 +104,14 @@
       <file leaf-file-name="LoginCooldown.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/utilities/LoginCooldown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4893617">
-              <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.29787233">
+              <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
                 <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +132,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +154,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,7 +176,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1247,13 +1255,7 @@
       <workItem from="1447930548788" duration="1177000" />
       <workItem from="1447952481446" duration="89000" />
       <workItem from="1448022860698" duration="379000" />
-      <workItem from="1449077805656" duration="1415000" />
-    </task>
-    <task id="LOCAL-00073" summary="More bootstrap work.">
-      <created>1445712459737</created>
-      <option name="number" value="00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1445712459737</updated>
+      <workItem from="1449077805656" duration="2147000" />
     </task>
     <task id="LOCAL-00074" summary="Now?">
       <created>1445713246454</created>
@@ -1543,11 +1545,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449078993188</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Brackets, ugh.">
+      <created>1449079369918</created>
+      <option name="number" value="00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1449079369918</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130821000" />
+    <option name="totallyTimeSpent" value="131553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
@@ -1596,7 +1604,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Let's use an URI instead..." />
     <MESSAGE value="Normalized usernames, fixed auth cookie." />
     <MESSAGE value="Fixed JWT audience." />
     <MESSAGE value="Added validation check." />
@@ -1621,7 +1628,8 @@
     <MESSAGE value="Fixed a missing import." />
     <MESSAGE value="Fixed some more logged in/out UI bugs." />
     <MESSAGE value="Added cooldown of 180s after 3 failed password entries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added cooldown of 180s after 3 failed password entries." />
+    <MESSAGE value="Brackets, ugh." />
+    <option name="LAST_COMMIT_MESSAGE" value="Brackets, ugh." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1945,7 +1953,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1961,7 +1971,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1977,7 +1989,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1999,12 +2013,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/utilities/LoginCooldown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4893617">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.29787233">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />
             <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
           </folding>
         </state>
       </provider>

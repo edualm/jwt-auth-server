@@ -34,6 +34,10 @@ public class LoginCooldown {
 
             return 0;
         }
+
+        public int getTries() {
+            return tries;
+        }
     }
 
     public int CooldownAfterThreeTries = 60;
@@ -60,20 +64,32 @@ public class LoginCooldown {
             s = new CooldownStructure();
 
             structs.put(u, s);
-        } else
+
+            System.out.println("Created failed try object for " + u);
+        } else {
             s.addTry();
+
+            System.out.println(u + " now has " + s.getTries() + " tries.");
+        }
     }
 
     public int getCooldownForUsername(String u) {
         CooldownStructure s = structs.get(u);
 
-        if (s == null)
+        if (s == null) {
+            System.out.println(u + " has no cooldown struct.");
+
             return 0;
-        else {
+        } else {
             int cd = s.getCooldown();
 
-            if (cd == 0)
+            if (cd == 0 && s.getTries() >= 3) {
+                System.out.println("Removing cooldown...");
+                
                 removeCooldown(u);
+            }
+
+            System.out.println(u + " has the cooldown " + cd);
 
             return cd;
         }
