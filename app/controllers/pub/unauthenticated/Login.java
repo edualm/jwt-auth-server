@@ -25,10 +25,14 @@ import java.util.List;
 public class Login extends Controller {
 
     public Result loginPage() {
+        DynamicForm form = Form.form().bindFromRequest();
+
+        String callback = form.get("callback");
+
         if (AuthManager.isLoggedIn(request().cookies()))
             return forbidden(forbidden.render(Config.ServerName, true));
 
-        return ok(login.render(Config.ServerName));
+        return ok(login.render(Config.ServerName, (callback != null ? callback : "")));
     }
 
     public Result handlePerformLogin() {
@@ -47,8 +51,6 @@ public class Login extends Controller {
 
         if (remStr != null && remStr.equals("true"))
             remember = true;
-
-        //  Need to implement callback.
 
         if (user == null || user == "")
             return ok(login_failure.render(Config.ServerName, "Missing field: \"username\"."));
@@ -74,7 +76,7 @@ public class Login extends Controller {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
             if (pi.validate(pass)) {
-                if (callback != null && callback != "")
+                if (callback != null && !callback.equals(""))
                     return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember)));
                 else {
                     response().setCookie(
