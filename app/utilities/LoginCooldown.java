@@ -56,11 +56,11 @@ public class LoginCooldown {
     public void addFailedTryForUsername(String u) {
         CooldownStructure s = structs.get(u);
 
-        if (s == null)
+        if (s == null) {
             s = new CooldownStructure();
 
             structs.put(u, s);
-        else
+        } else
             s.addTry();
     }
 
