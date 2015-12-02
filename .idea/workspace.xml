@@ -76,7 +76,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +106,8 @@
       <file leaf-file-name="LoginCooldown.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/utilities/LoginCooldown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29787233">
-              <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+            <state vertical-scroll-proportion="-0.031914894">
+              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
@@ -144,7 +146,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1255,13 +1259,7 @@
       <workItem from="1447930548788" duration="1177000" />
       <workItem from="1447952481446" duration="89000" />
       <workItem from="1448022860698" duration="379000" />
-      <workItem from="1449077805656" duration="2147000" />
-    </task>
-    <task id="LOCAL-00074" summary="Now?">
-      <created>1445713246454</created>
-      <option name="number" value="00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1445713246454</updated>
+      <workItem from="1449077805656" duration="2365000" />
     </task>
     <task id="LOCAL-00075" summary="Added missing WebJARs...">
       <created>1445713964141</created>
@@ -1551,11 +1549,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449079369918</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Added debug code.">
+      <created>1449080209896</created>
+      <option name="number" value="00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1449080209896</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131553000" />
+    <option name="totallyTimeSpent" value="131771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
@@ -1604,7 +1608,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Normalized usernames, fixed auth cookie." />
     <MESSAGE value="Fixed JWT audience." />
     <MESSAGE value="Added validation check." />
     <MESSAGE value=":v" />
@@ -1629,7 +1632,8 @@
     <MESSAGE value="Fixed some more logged in/out UI bugs." />
     <MESSAGE value="Added cooldown of 180s after 3 failed password entries." />
     <MESSAGE value="Brackets, ugh." />
-    <option name="LAST_COMMIT_MESSAGE" value="Brackets, ugh." />
+    <MESSAGE value="Added debug code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added debug code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1937,7 +1941,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1963,7 +1969,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2013,8 +2021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/utilities/LoginCooldown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29787233">
-          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+        <state vertical-scroll-proportion="-0.031914894">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />

@@ -40,7 +40,7 @@ public class LoginCooldown {
         }
     }
 
-    public int CooldownAfterThreeTries = 60;
+    public int CooldownAfterThreeTries = 180;
 
     private HashMap<String, CooldownStructure> structs = new HashMap<>();
 
@@ -85,7 +85,7 @@ public class LoginCooldown {
 
             if (cd == 0 && s.getTries() >= 3) {
                 System.out.println("Removing cooldown...");
-                
+
                 removeCooldown(u);
             }
 
