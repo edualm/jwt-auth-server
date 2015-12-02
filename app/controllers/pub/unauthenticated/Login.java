@@ -11,6 +11,7 @@ import play.mvc.Result;
 import utilities.AuthManager;
 import utilities.Config;
 import utilities.JWTFactory;
+import utilities.LoginCooldown;
 import views.html.forbidden;
 import views.html.login;
 import views.html.login_failure;
@@ -63,6 +64,11 @@ public class Login extends Controller {
         if (users.size() == 0)
             return ok(login_failure.render(Config.ServerName, "User not found: " + user));
 
+        int cooldown = LoginCooldown.getInstance().getCooldownForUsername(user);
+
+        if (cooldown != 0)
+            return ok(login_failure.render(Config.ServerName, "You must wait " + cooldown + " seconds before attempting to login again."));
+
         UserData u = users.get(0);
 
         for (UserAttribute a : u.attributes)
@@ -76,6 +82,8 @@ public class Login extends Controller {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
             if (pi.validate(pass)) {
+                LoginCooldown.getInstance().removeCooldown(user);
+
                 if (callback != null && !callback.equals(""))
                     return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember)));
                 else {
@@ -92,6 +100,8 @@ public class Login extends Controller {
                     return ok(login_success.render(Config.ServerName, ""));
                 }
             } else {
+                LoginCooldown.getInstance().addFailedTryForUsername(user);
+
                 return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
             }
         } catch (Exception e) {
