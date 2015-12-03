@@ -11,20 +11,24 @@ public class LoginCooldown {
 
     private class CooldownStructure {
         private int tries;
-        private double lastTry;
+        private double lastSignificantTry;
 
         public CooldownStructure() {
             tries = 1;
-            lastTry = Instant.now().getEpochSecond();
+
+            lastSignificantTry = Instant.now().getEpochSecond();
         }
 
         public void addTry() {
             tries++;
+
+            if (tries == 3)
+                lastSignificantTry = Instant.now().getEpochSecond();
         }
 
         public int getCooldown() {
             if (tries >= 3) {
-                int cd = (int) (lastTry + CooldownAfterThreeTries - Instant.now().getEpochSecond());
+                int cd = (int) (lastSignificantTry + CooldownAfterThreeTries - Instant.now().getEpochSecond());
 
                 if (cd < 0)
                     return 0;
