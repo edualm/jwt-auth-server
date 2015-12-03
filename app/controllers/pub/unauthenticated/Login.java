@@ -16,6 +16,7 @@ import views.html.forbidden;
 import views.html.login;
 import views.html.login_failure;
 import views.html.login_success;
+import views.html.generic_failure;
 
 import java.util.List;
 
@@ -30,8 +31,21 @@ public class Login extends Controller {
 
         String callback = form.get("callback");
 
-        if (AuthManager.isLoggedIn(request().cookies()))
+        if (AuthManager.isLoggedIn(request().cookies())) {
+            if (callback != null) {
+                String username = AuthManager.currentUsername(request().cookies());
+
+                UserData u = UserData.getUserDataFromUsername(username);
+
+                try {
+                    return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", false)));
+                } catch (Exception e) {
+                    return internalServerError(generic_failure.render(Config.ServerName, true, e.getMessage()));
+                }
+            }
+
             return forbidden(forbidden.render(Config.ServerName, true));
+        }
 
         return ok(login.render(Config.ServerName, (callback != null ? callback : "")));
     }
