@@ -16,6 +16,7 @@ import views.html.forbidden;
 import views.html.login;
 import views.html.login_failure;
 import views.html.login_success;
+import views.html.generic_failure;
 
 import java.util.List;
 
