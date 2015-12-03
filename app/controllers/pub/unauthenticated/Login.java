@@ -30,14 +30,28 @@ public class Login extends Controller {
 
         String callback = form.get("callback");
 
-        if (AuthManager.isLoggedIn(request().cookies()))
+        if (AuthManager.isLoggedIn(request().cookies())) {
+            if (callback != null) {
+                String username = AuthManager.currentUsername(request().cookies());
+
+                UserData u = UserData.getUserDataFromUsername(username);
+
+                try {
+                    return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", false)));
+                } catch (Exception e) {
+                    return internalServerError(generic_failure.render(Config.ServerName, true, e.getMessage()));
+                }
+            }
+
             return forbidden(forbidden.render(Config.ServerName, true));
+        }
 
         return ok(login.render(Config.ServerName, (callback != null ? callback : "")));
     }
 
     public Result handlePerformLogin() {
-        UserData u = null;
+        if (AuthManager.isLoggedIn(request().cookies()))
+            return forbidden(forbidden.render(Config.ServerName, true));
 
         DynamicForm form = Form.form().bindFromRequest();
 
@@ -52,74 +66,59 @@ public class Login extends Controller {
         if (remStr != null && remStr.equals("true"))
             remember = true;
 
-        if (AuthManager.isLoggedIn(request().cookies())) {
-            String username = AuthManager.currentUsername(request().cookies());
+        if (user == null || user == "")
+            return ok(login_failure.render(Config.ServerName, "Missing field: \"username\"."));
 
-            u = UserData.getUserDataFromUsername(username);
+        if (pass == null || pass == "")
+            return ok(login_failure.render(Config.ServerName, "Missing field: \"password\"."));
 
-            if (callback != null && !callback.equals("")) {
-                try {
+        List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
+
+        if (users.size() == 0)
+            return ok(login_failure.render(Config.ServerName, "User not found: " + user));
+
+        int cooldown = LoginCooldown.getInstance().getCooldownForUsername(user);
+
+        if (cooldown != 0)
+            return ok(login_failure.render(Config.ServerName, "You must wait " + cooldown + " seconds before attempting to login again."));
+
+        UserData u = users.get(0);
+
+        for (UserAttribute a : u.attributes)
+            if (a.key.equals("validation-key"))
+                return forbidden(login_failure.render(Config.ServerName, "Account not validated!"));
+
+        if (!u.enabled)
+            return ok(login_failure.render(Config.ServerName, "Resource disabled."));
+
+        try {
+            Password pi = new Password(u.passwordDigest, u.passwordSalt);
+
+            if (pi.validate(pass)) {
+                LoginCooldown.getInstance().removeCooldown(user);
+
+                if (callback != null && !callback.equals(""))
                     return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember)));
-                } catch (Exception e) {
-                    return internalServerError(e.getMessage());
+                else {
+                    response().setCookie(
+                            "jwt",
+                            JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember),
+                            (remember ? 1209600 : 3600),
+                            "/",
+                            Config.getServerURI(request()),
+                            true,
+                            true
+                    );
+
+                    return ok(login_success.render(Config.ServerName, ""));
                 }
-            } else
-                return ok(login_success.render(Config.ServerName, ""));
-        } else {
-            if (user == null || user == "")
-                return ok(login_failure.render(Config.ServerName, "Missing field: \"username\"."));
+            } else {
+                LoginCooldown.getInstance().addFailedTryForUsername(user);
 
-            if (pass == null || pass == "")
-                return ok(login_failure.render(Config.ServerName, "Missing field: \"password\"."));
-
-            List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
-
-            if (users.size() == 0)
-                return ok(login_failure.render(Config.ServerName, "User not found: " + user));
-
-            int cooldown = LoginCooldown.getInstance().getCooldownForUsername(user);
-
-            if (cooldown != 0)
-                return ok(login_failure.render(Config.ServerName, "You must wait " + cooldown + " seconds before attempting to login again."));
-
-            u = users.get(0);
-
-            for (UserAttribute a : u.attributes)
-                if (a.key.equals("validation-key"))
-                    return forbidden(login_failure.render(Config.ServerName, "Account not validated!"));
-
-            if (!u.enabled)
-                return ok(login_failure.render(Config.ServerName, "Resource disabled."));
-
-            try {
-                Password pi = new Password(u.passwordDigest, u.passwordSalt);
-
-                if (pi.validate(pass)) {
-                    LoginCooldown.getInstance().removeCooldown(user);
-
-                    if (callback != null && !callback.equals(""))
-                        return ok(login_success.render(Config.ServerName, callback + "?jwt=" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember)));
-                    else {
-                        response().setCookie(
-                                "jwt",
-                                JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), Config.ServerName, "auth", remember),
-                                (remember ? 1209600 : 3600),
-                                "/",
-                                Config.getServerURI(request()),
-                                true,
-                                true
-                        );
-
-                        return ok(login_success.render(Config.ServerName, ""));
-                    }
-                } else {
-                    LoginCooldown.getInstance().addFailedTryForUsername(user);
-
-                    return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
-                }
-            } catch (Exception e) {
-                return internalServerError(e.getMessage());
+                return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
             }
+        } catch (Exception e) {
+            return internalServerError(e.getMessage());
         }
     }
 
