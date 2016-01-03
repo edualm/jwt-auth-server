@@ -38,7 +38,7 @@ public class Config {
     static public final Integer MinimumPasswordLength = 8;
 
     static public String getServerURL(Http.Request request) {
-        return "https://" + getServerURI(request) + "/";
+        return "https://" + getServerURI(request);
     }
 
     static public String getServerURI(Http.Request request) {
