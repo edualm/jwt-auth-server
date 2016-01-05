@@ -24,8 +24,8 @@ public class Application extends Model {
     @Constraints.Required
     public Boolean pub;
 
-    //  admin groups
-    //  mod groups
+    //  Admin Groups
+    //  Mod Groups
 
-    //  etc etc
+    //  There's a bit to iterate on here.
 }
