@@ -3,6 +3,7 @@ package controllers.pub.unauthenticated;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.Config;
@@ -31,10 +32,10 @@ public class RecoverPassword extends Controller {
         UserData u = UserData.getUserDataFromUsername(user);
 
         if (u == null)
-            return notFound(generic_failure.render(Config.ServerName, false, "User not found!"));
+            return notFound(generic_failure.render(Config.ServerName, false, Messages.get("login.userNotFound")));
 
         if (!u.emailAddress.equals(email))
-            return notFound(generic_failure.render(Config.ServerName, false, "The inserted e-mail address is incorrect."));
+            return notFound(generic_failure.render(Config.ServerName, false, Messages.get("recover.incorrectEmail")));
 
         KeyGenerator g = new KeyGenerator();
 
@@ -51,9 +52,9 @@ public class RecoverPassword extends Controller {
         Mailer m = new Mailer(Config.ServerName);
 
         if (m.sendEmailPasswordChanged(u.username, u.emailAddress, newPassword)) {
-            return ok(generic_success.render(Config.ServerName, false, "A new password has been sent to your e-mail address."));
+            return ok(generic_success.render(Config.ServerName, false, Messages.get("recover.success")));
         } else {
-            return internalServerError(generic_success.render(Config.ServerName, false, "Unable to send an e-mail. Please try again."));
+            return internalServerError(generic_success.render(Config.ServerName, false, Messages.get("recover.failure")));
         }
     }
 

@@ -1,0 +1,63 @@
+login.missingField=Missing field: "{0}"
+login.userNotFound=User not found!"
+login.accountNotValidated=Account not validated.
+login.resourceDisabled=Resource Disabled.
+login.wrongPassword=Wrong Password.
+login.wrongDetails=Wrong Username or Password.
+login.cooldown=You must wait {0} seconds before attempting to login again.
+login.rememberMe=Remember Me
+login.recoverPassword=Recover Password
+login.loginButton=Login
+
+recover.incorrectEmail=Wrong E-Mail Address.
+recover.success=A new password has been sent to your e-mail address.
+recover.failure=Unable to send an e-mail. Please try again.
+
+register.tocNotAccepted=Terms and Conditions were not accepted.
+register.alreadyExists=A user with this username or e-mail already exists!
+register.emailFailure=Unable to send validation e-mail.
+
+validate.wrongKey=Wrong validation key.
+validate.alreadyValidated=This account appears to have already been validated.
+
+generic.username=Username
+generic.password=Password
+generic.emailAddress=E-Mail Address
+generic.firstName=First Name
+generic.lastName=Last Name
+
+generic.internalServerError=Internal Server Error
+generic.copyrightMessage=&copy; 2016 Audiência Zero
+generic.error=Error
+
+settings.passwordChange.oldMismatch=Old Password Mismatch!
+settings.passwordChange.localMismatch=The new password and its confirmation don't match!
+settings.passwordChange.success=Your password was successfully changed!
+
+settings.emailChange.blank=E-mail can't be blank!
+settings.emailChange.invalid=The inserted e-mail is not valid!
+settings.emailChange.success=Please check your (old) e-mail address for instructions on how to complete this process.
+settings.emailChange.failure=An error has occurred while sending an e-mail address.
+settings.emailChange.keyMismatch=Key Mismatch!
+settings.emailChange.finalSuccess=Successfully changed your e-mail address!
+
+index.welcomeMessage=Bem-vindo ao servidor de autenticação (SSO) da {0}!
+
+forbidden.title=Sem Permissões!
+forbidden.message=Erro 403: Não tem as permissões necessárias para executar a ação pretendid
+
+genericSuccess.title=Success!
+genericFailure.title=Failure!
+
+authenticationSuccess.title=Autenticação <small>Falhou</small>
+authenticationSuccess.redirectMessage=Vai agora ser redirecionado para a aplicação...
+authenticationSuccess.noRedirectMessage=Tem agora sessão iniciada em {0}!
+
+authenticationFailure.title=Autenticação <small>Falhou</small>
+
+logout.title=Sessão <small>Terminada</small>
+logout.message1=A sua sessão foi terminada com sucesso.
+logout.message2=Volte sempre!
+
+passwordRecovery.title=Recuperação de <small>Palavra-Passe</small>
+passwordRecovery.button=Generate New Password!

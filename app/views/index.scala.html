@@ -1,11 +1,11 @@
-@(loggedIn: Boolean)
+@(appName: String, loggedIn: Boolean)
 
-@main("Audiência Zero SSO", loggedIn) {
+@main(appName, loggedIn) {
 
 <div class="page-header">
-    <h1>Audiência Zero SSO</h1>
+    <h1>@appName</h1>
 </div>
 
-<p>Welcome to Audiência Zero's SSO server!</p>
+<p>@Messages("index.welcomeMessage", appName)</p>
 
 }

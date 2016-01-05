@@ -8,10 +8,6 @@ POST    /api/register                   controllers.api.Register.signup()
 POST    /api/login                      controllers.api.Login.login()
 POST    /api/user/changePassword        controllers.api.ManageUser.changePassword()
 
-GET     /debug/showAllUsers             controllers.Debug.showAllUsers()
-GET     /debug/createJWT                controllers.Debug.createJWT()
-GET     /debug/populate                 controllers.Debug.populateWithTestData()
-
 GET     /register/validate              controllers.pub.user.ValidateEmail.handleValidation()
 
 GET     /login                          controllers.pub.unauthenticated.Login.loginPage()

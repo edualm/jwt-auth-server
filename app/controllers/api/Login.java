@@ -8,6 +8,7 @@ import models.UserData;
 
 import play.data.DynamicForm;
 import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.*;
 
 import utilities.Config;
@@ -29,33 +30,33 @@ public class Login extends Controller {
         String pass = form.get("password");
 
         if (user == null || user == "")
-            return notFound("{\"error\": \"Missing field: \"username\".\"}");
+            return notFound("{\"error\": \"" + Messages.get("login.missingField", "username") + "\"}");
 
         if (pass == null || pass == "")
-            return notFound("{\"error\": \"Missing field: \"password\".\"}");
+            return notFound("{\"error\": \"" + Messages.get("login.missingField", "password") + "\"}");
 
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0)
-            return notFound("{\"error\": \"User not found.\"}");
+            return notFound("{\"error\": \"" + Messages.get("login.userNotFound") + "\"}");
+            //return notFound("{\"error\": \"Utilizador não encontrado.\"}");
 
         UserData u = users.get(0);
 
         for (UserAttribute a : u.attributes)
             if (a.key.equals("validation-key"))
-                return forbidden("{\"error\": \"Account not validated.\"}");
+                return notFound("{\"error\": \"" + Messages.get("login.accountNotValidated") + "\"}");
 
         if (!u.enabled)
-            return notFound("{\"error\": \"Resource disabled.\"}");
+            return notFound("{\"error\": \"" + Messages.get("login.resourceDisabled") + "\"}");
 
         try {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
 
-            if (pi.validate(pass)) {
+            if (pi.validate(pass))
                 return ok("{\"success\": true, \"jwt\": \"" + JWTFactory.createAuthenticationJWT(u, request().remoteAddress(), false) + "\"}");
-            } else {
-                return notFound("{\"error\": \"Wrong password!\"}");
-            }
+            else
+                return notFound("{\"error\": \"" + Messages.get("login.wrongPassword") + "\"}");
         } catch (Exception e) {
             return internalServerError(e.getMessage());
         }

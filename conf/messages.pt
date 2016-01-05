@@ -1,0 +1,7 @@
+login.missingField="Campo em falta: "{0}"
+login.userNotFound=User não encontrado!"
+login.accountNotValidated=Conta não validada.
+login.resourceDisabled=Recurso desativo.
+login.wrongPassword=Palavra-Passe incorreta.
+login.wrongDetails=Nome de Utilizador ou Palavra-Passe incorretos.
+login.cooldown=Deverá esperar {0} segundos antes de tentar iniciar sessão novamente.
