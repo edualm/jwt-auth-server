@@ -3,52 +3,52 @@
 @main(title, false) {
 
 <div class="page-header">
-  <h1>Login <small>@title</small></h1>
+  <h1>@Messages("register.title", title)</h1>
 </div>
 
 <form class="form-horizontal" action="/register" method="POST">
   <div class="form-group">
-    <label for="username" class="col-sm-2 control-label">Username</label>
+    <label for="username" class="col-sm-2 control-label">@Messages("register.username")</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+      <input type="text" class="form-control" name="username" id="username" placeholder=@Messages("register.username")>
     </div>
   </div>
   <div class="form-group">
-    <label for="password" class="col-sm-2 control-label">Password</label>
+    <label for="password" class="col-sm-2 control-label">@Messages("register.password")</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+      <input type="password" class="form-control" name="password" id="password" placeholder=@Messages("register.password")>
     </div>
   </div>
   <div class="form-group">
-    <label for="fn" class="col-sm-2 control-label">Primeiro Nome</label>
+    <label for="fn" class="col-sm-2 control-label">@Messages("register.firstname")</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="firstName" id="fn" placeholder="Primeiro Nome">
+      <input type="text" class="form-control" name="firstName" id="fn" placeholder=@Messages("register.firstname")>
     </div>
   </div>
   <div class="form-group">
-    <label for="ln" class="col-sm-2 control-label">Último Nome</label>
+    <label for="ln" class="col-sm-2 control-label">@Messages("register.lastname")</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="lastName" id="ln" placeholder="Último Nome">
+      <input type="text" class="form-control" name="lastName" id="ln" placeholder=@Messages("register.lastname")>
     </div>
   </div>
   <div class="form-group">
-    <label for="email" class="col-sm-2 control-label">Endereço de E-Mail</label>
+    <label for="email" class="col-sm-2 control-label">@Messages("register.email")</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="email" id="email" placeholder="Endereço de E-Mail">
+      <input type="text" class="form-control" name="email" id="email" placeholder=@Messages("register.email")>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox" name="toc" value="true"> Aceito os <a href="#">Termos e Condições</a>
+          <input type="checkbox" name="toc" value="true"> @Messages("register.accept")<a href="#">@Messages("register.terms")</a>
         </label>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Registar</button>
+      <button type="submit" class="btn btn-default">@Messages("register.register")</button>
     </div>
   </div>
 </form>

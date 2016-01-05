@@ -5,3 +5,95 @@ login.resourceDisabled=Recurso desativo.
 login.wrongPassword=Palavra-Passe incorreta.
 login.wrongDetails=Nome de Utilizador ou Palavra-Passe incorretos.
 login.cooldown=Deverá esperar {0} segundos antes de tentar iniciar sessão novamente.
+login.rememberMe=Lembra-te de mim.
+login.recoverPassword=Recuperar palavra-passe.
+login.loginButton=Login
+
+recover.incorrectEmail=Endereço de E-Mail Incorreto
+recover.success=Uma nova palavra-passe foi enviada para o teu endereço de E-Mail.
+recover.failure=Não é possível o envio de E-Mail. Tente outra vez.
+
+register.tocNotAccepted=Termos e Condições não foram aceites.
+register.alreadyExists=Um utilizador com este nome ou e-mail já existe!
+register.emailFailure=Não é possível o envio de e-mail de validação.
+
+validate.wrongKey=Chave de validação errada.
+validate.alreadyValidated=Esta conta parece já ter sido validada.
+
+generic.username=Nome de utilizador
+generic.password=Palavra-passe
+generic.emailAddress=Endereço de E-mail
+generic.firstName=Primeiro Nome
+generic.lastName=Último Nome
+
+generic.internalServerError=Erro interno de servidor
+generic.copyrightMessage=&copy; 2016 Audiência Zero
+generic.error=Erro
+
+settings.passwordChange.oldMismatch=Palavra-passe antiga não corresponde!
+settings.passwordChange.localMismatch=A palavra-passe nova e a confirmação não correspondem!
+settings.passwordChange.success=A palavra-passe foi alterada com sucesso!
+
+settings.emailChange.blank=E-mail não pode estar vazio!
+settings.emailChange.invalid=Este e-mail não é válido!
+settings.emailChange.success=Por favor consulte o seu e-mail antigo com as instruções necessárias para completar este processo.
+settings.emailChange.failure=Um erro ocorreu ao enviar um e-mail.
+settings.emailChange.keyMismatch=Chaves não correspondem!
+settings.emailChange.finalSuccess=E-mail alterado com sucesso!
+
+index.welcomeMessage=Bem-vindo ao servidor de autenticação (SSO) da {0}!
+
+forbidden.title=Sem Permissões!
+forbidden.message=Erro 403: Não tem as permissões necessárias para executar a ação pretendida!
+
+genericSuccess.title=Sucesso!
+genericFailure.title=Erro!
+
+authenticationSuccess.title=Autenticação <small>Falhou</small>
+authenticationSuccess.redirectMessage=Vai agora ser redirecionado para a aplicação...
+authenticationSuccess.noRedirectMessage=Tem agora sessão iniciada em {0}!
+
+authenticationFailure.title=Autenticação <small>Falhou</small>
+
+logout.title=Sessão <small>Terminada</small>
+logout.message1=A sua sessão foi terminada com sucesso.
+logout.message2=Volte sempre!
+
+passwordRecovery.title=Recuperação de <small>Palavra-Passe</small>
+passwordRecovery.button=Gera nova palavra-passe!
+
+navbar.home=Página inicial
+navbar.settings=Opções
+navbar.about=Sobre
+navbar.help=Ajuda
+navbar.logout=Sair
+navbar.register=Registo
+navbar.login=Entrar
+
+register.title=Registar <small>{0}</small>
+register.username=Nome de utilizador
+register.password=Palavra-passe
+register.firstname=Primeiro nome
+register.lastname=Último nome
+register.email=Endereço de e-mail
+register.accept=Eu aceito os
+register.terms=Termos e Condições
+register.register=Registar
+register.failed=Registo <small>Falhou</small>
+register.success=Registo <small>com Sucesso</small>
+register.check=Verifique o seu endereço de e-mail para validar o registo.
+
+settings.title=Definições <small>da Conta</small>
+settings.pwchange=Mudança de Palavra-Passe
+settings.pwold=Palavra-Passe Anterior
+settings.pwnew=Palavra-Passe Nova
+settings.pwnewconf=Confirmar Palavra-Passe Nova
+settings.pwreplace=Mudar Palavra-Passe
+settings.emchange=Mudança de Endereço de E-Mail
+settings.emnew=Novo E-Mail
+settings.emreplace=Mudar E-Mail
+
+validation.failed=Validação <small>Falhou</small>
+validation.success=Validação <small>com Sucesso</small>
+validation.m1=O seu endereço de e-mail foi validado com sucesso.
+validation.m2=Pode agora iniciar sessão!

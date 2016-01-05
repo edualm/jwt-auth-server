@@ -28,19 +28,19 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
+                        <li class="active"><a href="/">@Messages("navbar.home")</a></li>
                         @if(loggedIn) {
-                            <li><a href="/settings">Settings</a></li>
+                            <li><a href="/settings">@Messages("navbar.settings")</a></li>
                         }
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/help">Help</a></li>
+                        <li><a href="/about">@Messages("navbar.about")</a></li>
+                        <li><a href="/help">@Messages("navbar.help")</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if(loggedIn) {
-                            <li><a href="/logout">Log Out</a></li>
+                            <li><a href="/logout">@Messages("navbar.logout")</a></li>
                         } else {
-                            <li><a href="/register">Register</a></li>
-                            <li><a href="/login">Log In</a></li>
+                            <li><a href="/register">@Messages("navbar.register")</a></li>
+                            <li><a href="/login">@Messages("navbar.login")</a></li>
                         }
                     </ul>
                 </div>

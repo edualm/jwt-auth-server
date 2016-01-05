@@ -37,27 +37,63 @@ settings.passwordChange.success=Your password was successfully changed!
 settings.emailChange.blank=E-mail can't be blank!
 settings.emailChange.invalid=The inserted e-mail is not valid!
 settings.emailChange.success=Please check your (old) e-mail address for instructions on how to complete this process.
-settings.emailChange.failure=An error has occurred while sending an e-mail address.
+settings.emailChange.failure=An error has occurred while sending an e-mail.
 settings.emailChange.keyMismatch=Key Mismatch!
 settings.emailChange.finalSuccess=Successfully changed your e-mail address!
 
-index.welcomeMessage=Bem-vindo ao servidor de autenticação (SSO) da {0}!
+index.welcomeMessage=Welcome to the authentication server (SSO) of {0}!
 
-forbidden.title=Sem Permissões!
-forbidden.message=Erro 403: Não tem as permissões necessárias para executar a ação pretendid
+forbidden.title=No permissions!
+forbidden.message=Error 403: You do not have enough permissions to do that!
 
 genericSuccess.title=Success!
 genericFailure.title=Failure!
 
-authenticationSuccess.title=Autenticação <small>Falhou</small>
-authenticationSuccess.redirectMessage=Vai agora ser redirecionado para a aplicação...
-authenticationSuccess.noRedirectMessage=Tem agora sessão iniciada em {0}!
+authenticationSuccess.title=Authentication <small>Failed</small>
+authenticationSuccess.redirectMessage=You will now be redirected to the aplication...
+authenticationSuccess.noRedirectMessage=Session initiated in {0}!
 
-authenticationFailure.title=Autenticação <small>Falhou</small>
+authenticationFailure.title=Authentication <small>Failed</small>
 
-logout.title=Sessão <small>Terminada</small>
-logout.message1=A sua sessão foi terminada com sucesso.
-logout.message2=Volte sempre!
+logout.title=Session <small>Over</small>
+logout.message1=Your session has sucessfully ended.
+logout.message2=Come again!
 
-passwordRecovery.title=Recuperação de <small>Palavra-Passe</small>
+passwordRecovery.title=Password <small>Retrieval</small>
 passwordRecovery.button=Generate New Password!
+
+navbar.home=Home
+navbar.settings=Settings
+navbar.about=About
+navbar.help=Help
+navbar.logout=Log Out
+navbar.register=Register
+navbar.login=Log In
+
+register.title=Register <small>{0}</small>
+register.username=Username
+register.password=Password
+register.firstname=First Name
+register.lastname=Last Name
+register.email=E-Mail Address
+register.accept=I accept the
+register.terms=Terms and Conditions
+register.register=Register
+register.failed=Register <small>Failed</small>
+register.success=Register <small>Succeeded</small>
+register.check=Please check your e-mail to validate your registration.
+
+settings.title=Account <small>Definitions</small>
+settings.pwchange=Change Password
+settings.pwold=Old Password
+settings.pwnew=New Password
+settings.pwnewconf=Confirm New Password
+settings.pwreplace=Replace Password
+settings.emchange=Change E-Mail
+settings.emnew=New E-Mail
+settings.emreplace=Replace E-Mail
+
+validation.failed=Validation <small>Failed</small>
+validation.success=Validation <small>Successful</small>
+validation.m1=Your e-mail adress was validated successfully.
+validation.m2=You can now log in!
