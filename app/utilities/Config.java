@@ -32,13 +32,11 @@ public class Config {
     private static RsaJsonWebKey jsonWebKey = null;
 
     static public final String ServerName = "Audiência Zero SSO";
-    //  static public final String ServerURL = "https://audiencia-zero-auth.herokuapp.com/";
-    //  static public final String ServerURI = "audiencia-zero-auth.herokuapp.com";
 
     static public final Integer MinimumPasswordLength = 8;
 
     static public String getServerURL(Http.Request request) {
-        return "https://" + getServerURI(request);
+        return "https://" + getServerURI(request) + "/";
     }
 
     static public String getServerURI(Http.Request request) {

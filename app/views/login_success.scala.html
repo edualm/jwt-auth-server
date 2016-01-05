@@ -3,13 +3,13 @@
 @main(title, true) {
 
   <div class="page-header">
-    <h1>Authentication <small>Success</small></h1>
+    <h1>@Messages("authenticationSuccess.title")</h1>
   </div>
 
     @if(callback.equals("")) {
-        <p>You are now logged in to @title!</p>
+        <p>@Messages("authenticationSuccess.noRedirectMessage", title)</p>
     } else {
-        <p>You will now be redirected to your app...</p>
+        <p>@Messages("authenticationSuccess.redirectMessage")</p>
         <meta http-equiv="refresh" content="2; url=@callback" />
     }
 }

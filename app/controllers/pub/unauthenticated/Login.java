@@ -6,6 +6,7 @@ import models.UserAttribute;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.AuthManager;
@@ -68,29 +69,29 @@ public class Login extends Controller {
             remember = true;
 
         if (user == null || user == "")
-            return ok(login_failure.render(Config.ServerName, "Missing field: \"username\"."));
+            return ok(login_failure.render(Config.ServerName, Messages.get("login.missingField", "username")));
 
         if (pass == null || pass == "")
-            return ok(login_failure.render(Config.ServerName, "Missing field: \"password\"."));
+            return ok(login_failure.render(Config.ServerName, Messages.get("login.missingField", "password")));
 
         List<UserData> users = Ebean.find(UserData.class).where().eq("username", user).findList();
 
         if (users.size() == 0)
-            return ok(login_failure.render(Config.ServerName, "User not found: " + user));
+            return ok(login_failure.render(Config.ServerName, Messages.get("login.userNotFound")));
 
         int cooldown = LoginCooldown.getInstance().getCooldownForUsername(user);
 
         if (cooldown != 0)
-            return ok(login_failure.render(Config.ServerName, "You must wait " + cooldown + " seconds before attempting to login again."));
+            return ok(login_failure.render(Config.ServerName, Messages.get("login.cooldown", cooldown)));
 
         UserData u = users.get(0);
 
         for (UserAttribute a : u.attributes)
             if (a.key.equals("validation-key"))
-                return forbidden(login_failure.render(Config.ServerName, "Account not validated!"));
+                return forbidden(login_failure.render(Config.ServerName, Messages.get("login.accountNotValidated")));
 
         if (!u.enabled)
-            return ok(login_failure.render(Config.ServerName, "Resource disabled."));
+            return ok(login_failure.render(Config.ServerName, Messages.get("login.resourceDisabled")));
 
         try {
             Password pi = new Password(u.passwordDigest, u.passwordSalt);
@@ -116,7 +117,7 @@ public class Login extends Controller {
             } else {
                 LoginCooldown.getInstance().addFailedTryForUsername(user);
 
-                return ok(login_failure.render(Config.ServerName, "Incorrect username or password!"));
+                return ok(login_failure.render(Config.ServerName, Messages.get("login.wrongDetails")));
             }
         } catch (Exception e) {
             return internalServerError(e.getMessage());

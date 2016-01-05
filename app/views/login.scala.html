@@ -8,22 +8,22 @@
 
     <form class="form-horizontal" action="/login" method="POST">
         <div class="form-group">
-            <label for="username" class="col-sm-2 control-label">Username</label>
+            <label for="username" class="col-sm-2 control-label">@Messages("generic.username")</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                <input type="text" class="form-control" name="username" id="username" placeholder="@Messages("generic.username")">
             </div>
         </div>
         <div class="form-group">
-            <label for="password" class="col-sm-2 control-label">Password</label>
+            <label for="password" class="col-sm-2 control-label">@Messages("generic.password")</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" id="password" placeholder="@Messages("generic.password")">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="remember" value="true"> Remember me
+                        <input type="checkbox" name="remember" value="true"> @Messages("login.rememberMe")
                     </label>
                 </div>
             </div>
@@ -33,14 +33,14 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                     <label>
-                        <p><a href="/forgot">Recover Password</a></p>
+                        <p><a href="/forgot">@Messages("login.recoverPassword")</a></p>
                     </label>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Sign in</button>
+                <button type="submit" class="btn btn-default">@Messages("login.loginButton")</button>
             </div>
         </div>
     </form>

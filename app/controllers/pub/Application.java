@@ -9,7 +9,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public Result index() {
-        return ok(index.render(AuthManager.isLoggedIn(request().cookies())));
+        return ok(index.render(Config.ServerName, AuthManager.isLoggedIn(request().cookies())));
     }
 
 }

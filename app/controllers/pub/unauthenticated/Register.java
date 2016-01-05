@@ -5,6 +5,7 @@ import models.UserAttribute;
 import models.UserData;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import utilities.AuthManager;
@@ -42,25 +43,25 @@ public class Register extends Controller {
         String toc = form.get("toc");
 
         if (toc == null || !toc.equals("true"))
-            return ok(register_failure.render(Config.ServerName, "Terms and conditions not accepted."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("register.tocNotAccepted")));
 
         if (user == null || user == "")
-            return ok(register_failure.render(Config.ServerName, "Missing field: \"username\"."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("login.missingField", Messages.get("generic.username"))));
 
         if (pass == null || pass == "")
-            return ok(register_failure.render(Config.ServerName, "Missing field: \"password\"."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("login.missingField", Messages.get("generic.password"))));
 
         if (email == null || email == "")
-            return ok(register_failure.render(Config.ServerName, "Missing field: \"e-mail address\"."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("login.missingField", Messages.get("generic.emailAddress"))));
 
         if (firstName == null || firstName == "")
-            return ok(register_failure.render(Config.ServerName, "Missing file: \"firstName\"."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("login.missingField", Messages.get("generic.firstName"))));
 
         if (lastName == null || lastName == "")
-            return ok(register_failure.render(Config.ServerName, "Missing file: \"lastName\"."));
+            return ok(register_failure.render(Config.ServerName, Messages.get("login.missingField", Messages.get("generic.lastName"))));
 
         if (Ebean.find(UserData.class).where().eq("username", user).findList().size() != 0)
-            return ok(register_failure.render(Config.ServerName, "A user with this username or e-mail already exists!"));
+            return ok(register_failure.render(Config.ServerName, Messages.get("register.alreadyExists")));
 
         UserData u = new UserData(user, pass, email, firstName, lastName);
 
@@ -77,6 +78,6 @@ public class Register extends Controller {
         if (m.sendValidationEmail(user, email, val.value))
             return ok(register_success.render(Config.ServerName));
         else
-            return internalServerError(register_failure.render(Config.ServerName, "Couldn't send validation e-mail!"));
+            return internalServerError(register_failure.render(Config.ServerName, Messages.get("register.emailFailure")));
     }
 }
