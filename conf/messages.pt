@@ -16,6 +16,7 @@ recover.failure=Não é possível o envio de E-Mail. Tente outra vez.
 register.tocNotAccepted=Termos e Condições não foram aceites.
 register.alreadyExists=Um utilizador com este nome ou e-mail já existe!
 register.emailFailure=Não é possível o envio de e-mail de validação.
+register.emailSuccess=E-mail de validação enviado.
 
 validate.wrongKey=Chave de validação errada.
 validate.alreadyValidated=Esta conta parece já ter sido validada.
@@ -82,6 +83,7 @@ register.register=Registar
 register.failed=Registo <small>Falhou</small>
 register.success=Registo <small>com Sucesso</small>
 register.check=Verifique o seu endereço de e-mail para validar o registo.
+register.missField=Falta o campo: {0}
 
 settings.title=Definições <small>da Conta</small>
 settings.pwchange=Mudança de Palavra-Passe
@@ -97,3 +99,6 @@ validation.failed=Validação <small>Falhou</small>
 validation.success=Validação <small>com Sucesso</small>
 validation.m1=O seu endereço de e-mail foi validado com sucesso.
 validation.m2=Pode agora iniciar sessão!
+
+manage.missField=Falta o campo: {0}
+manage.missHead=Falta o header: {0}

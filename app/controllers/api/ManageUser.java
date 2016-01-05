@@ -8,6 +8,7 @@ import org.jose4j.jwt.consumer.JwtConsumer;
 import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.*;
 import utilities.Config;
 
@@ -29,7 +30,7 @@ public class ManageUser extends Controller {
             String pass = form.get("password");
 
             if (pass == null || pass.equals(""))
-                return notFound("{\"error\": \"Missing field: \"password\".\"}");
+                return notFound("{\"error\": \"" + Messages.get("manage.missField","password") + "\"}");
 
             try {
                 UserData u = getUserFromSession(jwt);
@@ -41,7 +42,7 @@ public class ManageUser extends Controller {
                 return notFound("{\"error\": \"" + e.getMessage() + "\"}");
             }
         } else {
-            return notFound("{\"error\": \"Missing header: \"Authorization\".\"}");
+            return notFound("{\"error\": \" " + Messages.get("manage.missHead", "authorization") + "\"}");
         }
 
 

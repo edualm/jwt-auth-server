@@ -29,6 +29,8 @@ public class Login extends Controller {
         String user = form.get("username").toLowerCase();
         String pass = form.get("password");
 
+        
+
         if (user == null || user == "")
             return notFound("{\"error\": \"" + Messages.get("login.missingField", "username") + "\"}");
 

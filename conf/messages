@@ -16,6 +16,7 @@ recover.failure=Unable to send an e-mail. Please try again.
 register.tocNotAccepted=Terms and Conditions were not accepted.
 register.alreadyExists=A user with this username or e-mail already exists!
 register.emailFailure=Unable to send validation e-mail.
+register.emailSuccess=Validation e-mail sent.
 
 validate.wrongKey=Wrong validation key.
 validate.alreadyValidated=This account appears to have already been validated.
@@ -82,6 +83,7 @@ register.register=Register
 register.failed=Register <small>Failed</small>
 register.success=Register <small>Succeeded</small>
 register.check=Please check your e-mail to validate your registration.
+register.missField=Missing Field {0}
 
 settings.title=Account <small>Definitions</small>
 settings.pwchange=Change Password
@@ -97,3 +99,6 @@ validation.failed=Validation <small>Failed</small>
 validation.success=Validation <small>Successful</small>
 validation.m1=Your e-mail adress was validated successfully.
 validation.m2=You can now log in!
+
+manage.missField=Missing Field {0}
+manage.missHead=Missing Header {0}
