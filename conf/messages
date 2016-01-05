@@ -1,5 +1,5 @@
 login.missingField=Missing field: "{0}"
-login.userNotFound=User not found!"
+login.userNotFound=User not found!
 login.accountNotValidated=Account not validated.
 login.resourceDisabled=Resource Disabled.
 login.wrongPassword=Wrong Password.
@@ -28,7 +28,7 @@ generic.firstName=First Name
 generic.lastName=Last Name
 
 generic.internalServerError=Internal Server Error
-generic.copyrightMessage=&copy; 2016 Audiência Zero
+generic.copyrightMessage= © 2016 Audiência Zero
 generic.error=Error
 
 settings.passwordChange.oldMismatch=Old Password Mismatch!
@@ -50,17 +50,17 @@ forbidden.message=Error 403: You do not have enough permissions to do that!
 genericSuccess.title=Success!
 genericFailure.title=Failure!
 
-authenticationSuccess.title=Authentication <small>Failed</small>
-authenticationSuccess.redirectMessage=You will now be redirected to the aplication...
+authenticationSuccess.title=Authentication Successful
+authenticationSuccess.redirectMessage=You will now be redirected to the application...
 authenticationSuccess.noRedirectMessage=Session initiated in {0}!
 
-authenticationFailure.title=Authentication <small>Failed</small>
+authenticationFailure.title=Authentication Failed
 
-logout.title=Session <small>Over</small>
-logout.message1=Your session has sucessfully ended.
+logout.title=Session Over
+logout.message1=Your session has successfully ended.
 logout.message2=Come again!
 
-passwordRecovery.title=Password <small>Retrieval</small>
+passwordRecovery.title=Password Retrieval
 passwordRecovery.button=Generate New Password!
 
 navbar.home=Home
@@ -71,21 +71,21 @@ navbar.logout=Log Out
 navbar.register=Register
 navbar.login=Log In
 
-register.title=Register <small>{0}</small>
+register.title=Register {0}
 register.username=Username
 register.password=Password
 register.firstname=First Name
 register.lastname=Last Name
 register.email=E-Mail Address
-register.accept=I accept the
-register.terms=Terms and Conditions
+register.accept=I read and accept the
+register.terms= Terms and Conditions
 register.register=Register
-register.failed=Register <small>Failed</small>
-register.success=Register <small>Succeeded</small>
+register.failed=Register Failed
+register.success=Register Succeeded
 register.check=Please check your e-mail to validate your registration.
 register.missField=Missing Field {0}
 
-settings.title=Account <small>Definitions</small>
+settings.title=Account Definitions
 settings.pwchange=Change Password
 settings.pwold=Old Password
 settings.pwnew=New Password
@@ -95,9 +95,9 @@ settings.emchange=Change E-Mail
 settings.emnew=New E-Mail
 settings.emreplace=Replace E-Mail
 
-validation.failed=Validation <small>Failed</small>
-validation.success=Validation <small>Successful</small>
-validation.m1=Your e-mail adress was validated successfully.
+validation.failed=Validation Failed
+validation.success=Validation Successful
+validation.m1=Your e-mail address was validated successfully.
 validation.m2=You can now log in!
 
 manage.missField=Missing Field {0}

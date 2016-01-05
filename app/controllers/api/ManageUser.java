@@ -42,7 +42,7 @@ public class ManageUser extends Controller {
                 return notFound("{\"error\": \"" + e.getMessage() + "\"}");
             }
         } else {
-            return notFound("{\"error\": \" " + Messages.get("manage.missHead", "authorization") + "\"}");
+            return notFound("{\"error\": \" " + Messages.get("manage.missHead", "Authorization") + "\"}");
         }
 
 
