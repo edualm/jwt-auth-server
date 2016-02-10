@@ -24,14 +24,14 @@ public class Config {
     private static final String kPublicKey = "jwt-publicKey";
     private static final String kPrivateKey = "jwt-privateKey";
 
-    public static final String kSendGridUsername = "ldso-az-auth";
-    public static final String kSendGridPassword = "iXdGD9zTgMQbq3";
+    public static final String kSendGridUsername = "";
+    public static final String kSendGridPassword = "";
 
-    public static final String kEmailFrom = "noreply@labcd.org";
+    public static final String kEmailFrom = "";
 
     private static RsaJsonWebKey jsonWebKey = null;
 
-    static public final String ServerName = "Audiência Zero SSO";
+    static public final String ServerName = "";
 
     static public final Integer MinimumPasswordLength = 8;
 
